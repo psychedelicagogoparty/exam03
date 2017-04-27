@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>投稿一覧</h1>
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+
+  <%= button_to '新規投稿', new_photo_path, method:'get', class:"btn btn-default" %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>投稿者</th>
+        <th>名前</th>
+        <th>コメント</th>
+        <th>写真</th>
+        <th colspan="10"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @photos.each do |photo| %>
+        <tr>
+          <!-- <＃% binding.pry %> -->
+          <!-- <td><%#= image_tag(Photo.find(photo.id).user.avatar, :size => "100x100") %></td> -->
+          <td><%= profile_img(Photo.find(photo.id).user) %></td>
+          <td><%= photo.name %></td>
+          <td><%= photo.content %></td>
+          <td><%= image_tag(photo.photo) %></td>
+          <td><%= button_to '編集', edit_photo_path(photo), method:'get', class:"btn btn-block btn-info" %></td>
+          <td><%= button_to '削除', photo_path(photo), method:'delete',data: { confirm: '本当に削除しますか？'}, class:"btn btn-block btn-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+
+  </div>
+</div>

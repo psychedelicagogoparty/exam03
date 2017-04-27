@@ -1,0 +1,67 @@
+<h2>プロフィールの編集</h2>
+  <!-- <%#= resource_name.to_s.humanize %></h2> -->
+  <!--次やること　javascriptによるフォーム入力な用の確認！-->
+
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_messages! %>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, class:'form-control'%>
+  </div>
+  <br/>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, class:'form-control'%>
+  </div>
+  <br/>
+
+<% if @user.provider.blank? %>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "off", placeholder:"新しいパスワード", class:"form-control" %>
+    <% if @minimum_password_length %>
+      <br />
+      <!-- <em><%= @minimum_password_length %> characters minimum</em> -->
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "off",placeholder:"新しいパスワードの再入力",class:'form-control' %>
+  </div>
+  <br/>
+
+  <div class="field">
+    <%= f.password_field :current_password, autocomplete: "off", placeholder: "現在のパスワード", class:"form-control" %>
+  </div>
+  <br/>
+
+<% end %>
+
+  <div class="field">
+    <h3>プロフィール画像</h3>
+    <%= profile_img(@user) if profile_img(@user) %>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache%>
+  </div>
+  <br/>
+
+  <div class="actions">
+    <%= f.submit "内容を更新", class:'btn btn-primary btn-block' %>
+  </div>
+<% end %>
+
+<h3>アカウントの削除</h3>
+
+<!-- <p>Unhappy? -->
+<%= button_to "アカウント削除", registration_path(resource_name), data: { confirm: "本当に削除しますか？" }, method: :delete, class:"btn btn-primary btn-block" %>
+<br/>
+<%= button_to "もどる", root_path, method:'get', class: 'btn btn-default btn-block' %>
+  </div>
+</div>

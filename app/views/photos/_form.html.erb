@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+
+    <%= form_for(@photo) do |f| %>
+      <%= f.error_messages! %>
+
+      <div class="field">
+        <%= f.text_field :name, placeholder:"タイトル", class:'form-control' %>
+      </div>
+      <br/>
+
+      <div class="field">
+        <%= f.text_field :content , placeholder:"コメント", class:'form-control' %>
+      </div>
+
+      <div class="field">
+          <h3>投稿画像</h3>
+        <!-- <＃%= profile_img(@photo) if profile_img(@photo) %> -->
+          <%= image_tag(@photo.photo, :size => "200x200")%>
+          <%= f.file_field :photo %>
+          <%= f.hidden_field :photo_cache %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "登録", method:'post', class:'btn btn-block btn-primary'%>
+      </div>
+    <% end %>
+
+  </div>
+</div>
