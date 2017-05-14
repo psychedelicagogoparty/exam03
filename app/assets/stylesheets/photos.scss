@@ -1,3 +1,39 @@
 // Place all the styles related to the Photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main {
+  // height:500px;
+  // width:500px;
+  // padding-right: 150px;
+  // background-color: white;
+  // padding-bottom: 50px;
+}
+
+.contribution {
+  // text-align: center;
+  height: auto;
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.contribution_name {
+  text-align: left;
+  margin-left: 15px;
+  color:black;
+  margin-bottom: 10px;
+  // padding-left: 5px;
+}
+
+.contribution_text {
+  padding: 10px;
+  text-align: left;
+  height: auto;
+  width: 100%;
+}
+
+.contribution_image {
+  padding: 10px;
+}

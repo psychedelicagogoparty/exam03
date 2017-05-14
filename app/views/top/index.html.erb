@@ -1,10 +1,27 @@
-<section class="main-header">
-  <p id="notice"> <%= notice %> </p>
-  <%= image_tag('top-image') %>
-</section>
 
-<section class ="main-header">
-  <h1>Welcome TopPage</h1>
-  <br>
-  <%= "copygram" %>
-</section>
+<div class="main">
+  <div class="main-content">
+    <p class="flash"> <%= notice %> </p>
+
+        <section class="about">
+          <h2>
+            Clonebookを使うと、友達や同僚、同級生、仲間たちとつながりを深められます。
+            ケータイ、スマートフォンからもアクセスできます。
+          </h2>
+        </section>
+        <%= image_tag('top-image') %>
+  </div>
+
+
+  <section class ="main-header">
+    <h1>Welcome TopPage</h1>
+    <br>
+    <%= "copygram" %>
+  </section>
+
+  </div>
+</div>
+
+<h2>アカウント登録</h2>
+
+<!-- <%#= render template: "devise/registrations/new" %> -->

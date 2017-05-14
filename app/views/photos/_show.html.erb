@@ -1,0 +1,7 @@
+<div id="comments_area">
+  <%= render partial: 'comments/index', locals: { comments: @comments, photo: @photo } %>
+</div>
+<%= render partial: 'comments/form', locals: { comment: @comment, photo: @photo } %>
+<% if current_user.id == @photo.user_id %>
+  <%#= link_to '編集', edit_photo_path(@photo) %> |
+<% end %>

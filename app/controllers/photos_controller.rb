@@ -8,7 +8,12 @@ class PhotosController < ApplicationController
   # GET /photos
   def index
     @photos = Photo.all
-    
+    # render action: :show #これはshowのviewを表示するだけ(showアクションは発生しない)
+  end
+
+  def show
+    # @comment = @photo.comments.build
+    # @comments = @photo.comments
   end
 
 

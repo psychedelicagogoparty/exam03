@@ -21,6 +21,4 @@ class ApplicationController < ActionController::Base
     # photos_parameter_sanitizer.permit(:account_update, keys: PERMISSIBLE_ATTRIBUTES)
   end
 
-  
-
 end

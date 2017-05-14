@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -72,4 +73,8 @@ group :development do
   gem 'dotenv-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  #モデルの表示を見やすくする
+  gem 'hirb'
+  gem 'hirb-unicode'
 end

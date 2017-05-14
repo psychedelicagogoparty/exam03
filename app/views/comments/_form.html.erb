@@ -1,0 +1,12 @@
+<%= form_for([photo,comment], remote:true) do |f| %>
+
+  <!-- 下のhidden_fieldを入れないとcommentテーブルのphoto_idが格納されない-->
+  <%= f.hidden_field :photo_id %>
+  <div class="field">
+    <!-- この段階でcommentテーブルのphoto_idは入っている-->
+    <%= f.text_field :content, placeholder: "内容", class: "form-control"  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,13 +1,28 @@
 Rails.application.routes.draw do
+
+  get 'relationships/create'
+
+  get 'relationships/destroy'
+
+  # get 'comments/create'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :photos
+
+  resources :photos do
+      resources :comments
+      post :confirm, on: :collection
+  end
 
 
-
+  #deviseのルーティング
   devise_for :users, controllers: {
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
   }
+
+  resources :users, only:[:index, :show]
+
+  resources :relationships, only:[:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -23,6 +38,8 @@ Rails.application.routes.draw do
     # このアドレスでletter_openerを開く
     mount LetterOpenerWeb::Engine, at:"/letter_opener"
   end
+
+  #以下書き方の例
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

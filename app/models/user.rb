@@ -3,7 +3,19 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   #UserクラスをPhotoクラスへ紐付けしユーザーを削除すると当該のPhotoカラムを削除する
-  has_many :photos, :dependent => :delete_all
+  has_many :photos, dependent: :destroy
+  has_many :comments, dependent: :destroy
+
+  # Userモデルが複数のrelationshipを持つ
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  # Relationshipモデルに対してreverse_relationshipsという紐付けを定義
+  has_many :reverse_relationships, foreign_key: "followed_id", class_name: "Relationship", dependent: :destroy
+
+  # UserモデルがRelationshipモデルを介して複数のUserを持つ
+  #
+  has_many :followed_users, through: :relationships, source: :followed
+  has_many :followers, through: :reverse_relationships, source: :follower
+
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
@@ -12,6 +24,21 @@ class User < ActiveRecord::Base
   mount_uploader :avatar,PhotoUploader  #アップローダーの設定
 
   validates :name, :email,presence: true #バリデーションの設定
+
+
+  #指定のユーザをフォローする
+  def follow!(other_user)
+    relationships.create!(followed_id: other_user.id)
+  end
+
+  #フォローしているかどうかを確認する
+  def following?(other_user)
+    relationships.find_by(followed_id: other_user.id)
+  end
+
+  def unfollow!(other_user)
+    relationships.find_by(followed_id: other_user.id).destroy
+  end
 
   #ランダムなuidを作成するメソッド
   def self.create_unique_string
