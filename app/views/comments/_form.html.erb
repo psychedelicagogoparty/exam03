@@ -2,10 +2,19 @@
 
   <!-- 下のhidden_fieldを入れないとcommentテーブルのphoto_idが格納されない-->
   <%= f.hidden_field :photo_id %>
+
   <div class="field">
     <!-- この段階でcommentテーブルのphoto_idは入っている-->
-    <%= f.text_field :content, placeholder: "内容", class: "form-control"  %>
+
+    <!--コメントのコンテンツがないかどうかの確認-->
+    <% if comment.content.blank? %>
+      <%= f.text_field :content, placeholder: "内容", class: "form-control"  %>
+    <% else %>
+      <!-- <p>neko</p> -->
+      <%= f.text_field :content ,placeholder: "内容", class: "form-control"  %>
+    <% end %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -21,12 +21,29 @@ class CommentsController < ApplicationController
 
     end
 
+# コメントの編集
     def edit
-      #binding.pry
-      redirect_to photos_path(@comment)
+      # binding.pry
+      # コメントのフラグをtrueにする
+      @comment_edit = true
+      render :index
     end
 
+    def update
+      # クライアント要求に応じてフォーマットを変更
+      # binding.pry
+        respond_to do |format|
+          if @comment.update(comment_params)
+            format.html { redirect_to photos_path(@comment), notice: 'コメントを更新しました。' }
+            # JS形式でindexアクションを返す
+            format.js {render :index}
+          else
+            format.html { render :new }
+          end
+        end
+    end
 
+#コメントの削除
     def destroy
       #binding.pry
       @photo =  @comment.photo
@@ -51,6 +68,11 @@ private
 
   def set_comment
     @comment = Comment.find(params[:id])
+    @photo = @comment.photo
+  end
+
+  def set_edit
+    @comment_edit = false
   end
 
 end

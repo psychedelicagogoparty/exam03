@@ -1,0 +1,42 @@
+  [1m[36mActiveRecord::SchemaMigration Load (12.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (207.5ms)[0m  [1mDROP DATABASE IF EXISTS "exam03_test"[0m
+  [1m[35m (587.7ms)[0m  CREATE DATABASE "exam03_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.4ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "user_id" integer, "photo_id" integer, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX  "index_comments_on_photo_id" ON "comments" USING btree ("photo_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_comments_on_user_id" ON "comments" USING btree ("user_id")
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "conversations" ("id" serial primary key, "sender_id" integer, "recipient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "photos" ("id" serial primary key, "name" character varying, "content" text, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "photo" character varying) 
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "relationships" ("id" serial primary key, "follower_id" integer, "followed_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_relationships_on_followed_id" ON "relationships" USING btree ("followed_id")
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_relationships_on_follower_id_and_followed_id" ON "relationships" USING btree ("follower_id", "followed_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_relationships_on_follower_id" ON "relationships" USING btree ("follower_id")
+  [1m[36m (22.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "uid" character varying DEFAULT '' NOT NULL, "provider" character varying DEFAULT '' NOT NULL, "image_url" character varying, "avatar" character varying, "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users" USING btree ("confirmation_token")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_uid_and_provider" ON "users" USING btree ("uid", "provider")[0m
+  [1m[35m (4.0ms)[0m  ALTER TABLE "comments" ADD CONSTRAINT "fk_rails_8e6de2dbfc"
+FOREIGN KEY ("photo_id")
+  REFERENCES "photos" ("id")
+
+  [1m[36m (4.2ms)[0m  [1mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170515122329')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170326052532')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170326054359')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170326081230')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170327072707')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170331094120')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170405051751')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170405060314')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170408041007')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170501070958')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170514005936')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

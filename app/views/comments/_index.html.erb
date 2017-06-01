@@ -4,10 +4,19 @@
       <% unless comment.id.nil? %>
         <li>
           <p class="left"><%= comment.user.name %>さんがコメントしました。</p>
-          <p class="left"><%= comment.content %></p>
+
+          <!--編集ボタンが押された時の動作:コメントidが一致するかどうか-->
+          <% if comment.id == @comment.id  && @comment_edit == true %>
+            <%= render partial: 'comments/form', locals: { comment: comment, photo: @photo } %>
+          <% else %>
+          <!-- コメント内容の表示 -->
+            <!-- <p>test</p> -->
+            <p class="left"><%= comment.content %></p>
+          <% end %>
+
           <% if current_user.id == comment.user.id %>
             <p class="right">
-              <%= link_to '', edit_photo_comment_path(photo, comment), class: "fa fa-pencil-square-o fa-lg", method: :post, remote: true  %>
+              <%= link_to '', edit_photo_comment_path(photo, comment), class: "fa fa-pencil-square-o fa-lg", method: :get, remote: true  %>
               <%= link_to '', photo_comment_path(photo, comment), class: "fa fa-trash-o fa-lg", method: :delete, remote: true %>
             </p>
           <% end %>

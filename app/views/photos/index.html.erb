@@ -9,7 +9,7 @@
 
 <div class = "main col-xs-12">
 
-     <!--　投稿の大枠-- >
+     <!--投稿の大枠-- >
     <div class = "contribution">
 
     <% @photos.each do |photo| %>
@@ -29,7 +29,7 @@
             <%= image_tag(photo.photo,:size => "400x400") %>
           </div>
 
-          <!-- コメント入力欄　-->
+          <!-- コメント入力欄-->
           <!-- アプリケーションヘルパーから呼び出し-->
           <% comment_form(Photo.find(photo.id)) %>
            <!-- コメント入力のビューを表示-->
@@ -38,14 +38,13 @@
           <div id="comments_area_<%= photo.id %>">
             <%= render partial: 'comments/index', locals: { comments: @comments, photo: @photo } %>
           </div>
-          
             <%= render partial: 'comments/form', locals: { comment: @comment, photo: @photo } %>
 
           <% if current_user.id == @photo.user_id %>
-              <%#= link_to '編集', edit_photo_path(@photo) %> |
+              <%#= link_to '編集', edit_photo_path(@photo) %>
+                <%= button_to '投稿を削除', photo_path(photo), method:'delete',data: { confirm: '本当に削除しますか？'}, class:"btn  btn-danger" %>
           <% end %>
-          <%= button_to '削除', photo_path(photo), method:'delete',data: { confirm: '本当に削除しますか？'}, class:"btn btn-block btn-danger" %>
-          <br/>
+
         <% end %>
       </div>
 
@@ -54,6 +53,4 @@
     </div>
 
 </div>
-
-  <br>
-</div>
+<br/>

@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'relationships/create'
-
-  get 'relationships/destroy'
+  # get 'relationships/create'
+  # get 'relationships/destroy'
 
   # get 'comments/create'
 
@@ -11,6 +10,10 @@ Rails.application.routes.draw do
   resources :photos do
       resources :comments
       post :confirm, on: :collection
+  end
+
+  resources :conversations do
+    resources :messsages
   end
 
 
