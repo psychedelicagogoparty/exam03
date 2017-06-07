@@ -29,7 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -58,6 +58,9 @@ gem 'twitter-bootstrap-rails'
 gem 'rails_12factor', group: :production
 
 gem 'fog'
+#gem 'dotenv-rails'
+
+gem 'therubyracer', platforms: :ruby
 
 #開発環境及びテスト環境用のgem
 group :development, :test do
@@ -79,4 +82,11 @@ group :development do
   #モデルの表示を見やすくする
   gem 'hirb'
   gem 'hirb-unicode'
+
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+
 end
