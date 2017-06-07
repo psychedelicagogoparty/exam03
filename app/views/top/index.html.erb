@@ -1,8 +1,6 @@
-
 <div class="main">
   <div class="main-content">
     <p class="flash"> <%= notice %> </p>
-
         <section class="about">
           <h2>
             Clonebookを使うと、友達や同僚、同級生、仲間たちとつながりを深められます。
@@ -10,18 +8,18 @@
           </h2>
         </section>
         <%= image_tag('top-image') %>
-  </div>
+   </div>
 
 
   <section class ="main-header">
-    <h1>Welcome TopPage</h1>
+    <h1>Welcome to TopPage</h1>
     <br>
-    <%= "copygram" %>
-  </section>
 
-  </div>
-</div>
 
-<h2>アカウント登録</h2>
+  <h2>アカウント登録</h2>
 
+  <%= render('new')%>
+</section>
 <!-- <%#= render template: "devise/registrations/new" %> -->
+<!-- <%#= render :file => "devise/registrations/new" %> -->
+</div>

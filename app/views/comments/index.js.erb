@@ -2,4 +2,7 @@
 // var id_name = "#comments_area" + id_num
 $("#comments_area_"+"<%= @photo.id %>").html("<%= j(render 'comments/index', { comments: @comment.photo.comments, photo: @comment.photo }) %>")
 console.log
-$(':text').val('')
+
+// if (<% @comment.content.blank? %> == true) {
+//   $(':text').val('')
+// }

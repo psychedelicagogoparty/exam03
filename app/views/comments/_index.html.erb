@@ -9,8 +9,7 @@
           <% if comment.id == @comment.id  && @comment_edit == true %>
             <%= render partial: 'comments/form', locals: { comment: comment, photo: @photo } %>
           <% else %>
-          <!-- コメント内容の表示 -->
-            <!-- <p>test</p> -->
+            <!-- コメント内容の表示 -->
             <p class="left"><%= comment.content %></p>
           <% end %>
 
