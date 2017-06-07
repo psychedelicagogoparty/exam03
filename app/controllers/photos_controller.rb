@@ -11,12 +11,14 @@ class PhotosController < ApplicationController
     # render action: :show #これはshowのviewを表示するだけ(showアクションは発生しない)
   end
 
+  # 確認 
   def show
     # @comment = @photo.comments.build
     # @comments = @photo.comments
   end
 
 
+  # 新規作成
   # GET /photos/new
   def new
 
@@ -41,7 +43,7 @@ class PhotosController < ApplicationController
 
       #photoテーブルの書き込み時の処理
       if @photo.save
-        redirect_to photos_url, notice: '写真が投稿されました'
+        redirect_to photos_url, notice: '投稿が完了しました'
         # render :show, status: :created, location: @photo
       else
         render :new
@@ -53,7 +55,7 @@ class PhotosController < ApplicationController
   def update
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to photos_url, notice: '写真が更新されました！.' }
+        format.html { redirect_to photos_url, notice: '更新が完了しました' }
         format.json { render :show, status: :ok, location: @photo }
       else
         format.html { render :edit }

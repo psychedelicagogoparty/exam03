@@ -16,7 +16,9 @@
 
           <!-- <＃% binding.pry %> -->
           <div class = "contribution_name">
-            <%= profile_img(Photo.find(photo.id).user) %>
+            <!-- <%#= profile_img(Photo.find(photo.id).user) %> -->
+            <!-- <%#= image_tag(@photos.find(photo.id).user.image_url, :size => "40x40")%> -->
+            <%= profile_photo_checker(photo) %>
             <%= link_to photo.name, edit_photo_path(photo), method:'get' %>さん
             <br/>
             <%= contribution_time(photo.created_at) %>に投稿
@@ -25,8 +27,9 @@
             <%= photo.content %>
           </div>
 
+
           <div class = "contribution_image">
-            <%= image_tag(photo.photo,:size => "400x400") %>
+            <%= photo_checker(photo) %>
           </div>
 
           <!-- コメント入力欄-->

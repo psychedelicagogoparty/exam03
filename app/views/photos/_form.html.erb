@@ -14,11 +14,20 @@
       </div>
 
       <div class="field">
-          <h3>投稿画像</h3>
         <!-- <＃%= profile_img(@photo) if profile_img(@photo) %> -->
-          <%= image_tag(@photo.photo, :size => "200x200")%>
-          <%= f.file_field :photo %>
-          <%= f.hidden_field :photo_cache %>
+          <% if @photo.photo.model.photo.blank? %>
+                <!-- <%# binding.pry %> -->
+                <h3>画像を投稿する</h3>
+                <!-- <%= image_tag(@photo.photo, :size => "200x200")%> -->
+                <%= f.file_field :photo %>
+                <%= f.hidden_field :photo_cache %>
+          <% else %>
+                <!-- <%# binding.pry %> -->
+                <h3>画像を更新する</h3>
+                <%= image_tag(@photo.photo, :size => "200x200")%>
+                <%= f.file_field :photo %>
+                <!-- <%= f.hidden_field :photo_cache %> -->
+          <% end %>
       </div>
 
       <div class="actions">
