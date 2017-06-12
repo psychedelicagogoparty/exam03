@@ -1,7 +1,7 @@
 lock '3.6.0'
 
 # デプロイするアプリケーション名
-set :application, 'achieve'
+set :application, 'exam03'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
 set :repo_url, 'https://github.com/psychedelicagogoparty/exam03'
@@ -10,7 +10,7 @@ set :repo_url, 'https://github.com/psychedelicagogoparty/exam03'
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/achieve'
+set :deploy_to, '/var/www/exam03'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
@@ -25,6 +25,18 @@ set :rbenv_type, :system
 
 #出力するログのレベル。
 set :log_level, :debug
+
+
+# set :default_env, {
+# 	rbenv_root: "/usr/local/rbenv",
+# 	path: "~/.rbenv/shims:~/.rbenv/bin:$PATH",
+# 	AWS_REGION: ENV['AWS_REGION'],
+# 	AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
+#         AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
+# }
+# set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
+# set :sidekiq_queue, :carrierwave
+
 
 namespace :deploy do
   desc 'Restart application'
