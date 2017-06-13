@@ -7348,3 +7348,878 @@ FOREIGN KEY ("user_id")
   INFO [711bd1b9] Running /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/exam03/current/config/unicorn/production.rb -E deployment -D  as app@54.199.217.53
  DEBUG [711bd1b9] Command: cd /var/www/exam03/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/exam03/current/config/unicorn/production.rb -E deployment -D  )
   INFO [711bd1b9] Finished in 3.493 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-13 11:19:41 +0900 cap production unicorn deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [09d9d11f] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@54.199.217.53
+ DEBUG [09d9d11f] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [09d9d11f] Finished in 0.363 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-13 11:19:49 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bf201724] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@54.199.217.53
+ DEBUG [bf201724] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [bf201724] Finished in 0.324 seconds with exit status 0 (successful).
+  INFO [f0001e7b] Running /usr/bin/env mkdir -p /tmp as app@54.199.217.53
+ DEBUG [f0001e7b] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [f0001e7b] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-exam03-production-yosi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-exam03-production-yosi.sh 100.0%
+  INFO [15463de6] Running /usr/bin/env chmod 700 /tmp/git-ssh-exam03-production-yosi.sh as app@54.199.217.53
+ DEBUG [15463de6] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-exam03-production-yosi.sh )
+  INFO [15463de6] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [743d82be] Running /usr/bin/env git ls-remote --heads https://github.com/psychedelicagogoparty/exam03 as app@54.199.217.53
+ DEBUG [743d82be] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git ls-remote --heads https://github.com/psychedelicagogoparty/exam03 )
+ DEBUG [743d82be] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c	refs/heads/master
+  INFO [743d82be] Finished in 0.699 seconds with exit status 0 (successful).
+  INFO [4f5656a5] Running /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/releases as app@54.199.217.53
+ DEBUG [4f5656a5] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/releases )
+  INFO [4f5656a5] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [7eee4644] Running /usr/bin/env mkdir -p /var/www/exam03/shared/log /var/www/exam03/shared/tmp/pids /var/www/exam03/shared/tmp/cache /var/www/exam03/shared/tmp/sockets /var/www/exam03/shared/public/uploads /var/www/exam03/shared/public/assets as app@54.199.217.53
+ DEBUG [7eee4644] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared/log /var/www/exam03/shared/tmp/pids /var/www/exam03/shared/tmp/cache /var/www/exam03/shared/tmp/sockets /var/www/exam03/shared/public/uploads /var/www/exam03/shared/public/assets )
+  INFO [7eee4644] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [a3b1206e] Running /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/shared/config as app@54.199.217.53
+ DEBUG [a3b1206e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/shared/config )
+  INFO [a3b1206e] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [a630c04c] Running [ -f /var/www/exam03/shared/.env ] as app@54.199.217.53
+ DEBUG [a630c04c] Command: [ -f /var/www/exam03/shared/.env ]
+ DEBUG [a630c04c] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [a841c8b6] Running [ -f /var/www/exam03/shared/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [a841c8b6] Command: [ -f /var/www/exam03/shared/config/secrets.yml ]
+ DEBUG [a841c8b6] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [415b4974] Running [ -f /var/www/exam03/current/REVISION ] as app@54.199.217.53
+ DEBUG [415b4974] Command: [ -f /var/www/exam03/current/REVISION ]
+ DEBUG [415b4974] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [bd66800d] Running /usr/bin/env cat /var/www/exam03/current/REVISION 2>/dev/null as app@54.199.217.53
+ DEBUG [bd66800d] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cat /var/www/exam03/current/REVISION 2>/dev/null )
+ DEBUG [bd66800d] 	2aac8c293b1a262e433212ac616d8ef33fb91386
+ DEBUG [bd66800d] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [08dc7844] Running [ -f /var/www/exam03/repo/HEAD ] as app@54.199.217.53
+ DEBUG [08dc7844] Command: [ -f /var/www/exam03/repo/HEAD ]
+ DEBUG [08dc7844] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/exam03/repo
+ DEBUG [d9fe91cf] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [d9fe91cf] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [d9fe91cf] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [48f0419a] Running /usr/bin/env git remote update --prune as app@54.199.217.53
+ DEBUG [48f0419a] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [48f0419a] 	Fetching origin
+ DEBUG [48f0419a] 	From https://github.com/psychedelicagogoparty/exam03
+   2aac8c2..abb9edd  master     -> master
+  INFO [48f0419a] Finished in 0.859 seconds with exit status 0 (successful).
+ DEBUG [9cfb5d05] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [9cfb5d05] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [9cfb5d05] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [9a2702db] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951 as app@54.199.217.53
+ DEBUG [9a2702db] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951 )
+  INFO [9a2702db] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [de05857d] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/exam03/releases/20170613021951 as app@54.199.217.53
+ DEBUG [de05857d] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/exam03/releases/20170613021951 )
+  INFO [de05857d] Finished in 0.388 seconds with exit status 0 (successful).
+ DEBUG [ace4ba1a] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [ace4ba1a] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [ace4ba1a] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [6c814458] Running /usr/bin/env git rev-list --max-count=1 master as app@54.199.217.53
+ DEBUG [6c814458] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6c814458] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c
+ DEBUG [6c814458] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [e6c02f11] Running if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [e6c02f11] Command: if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi
+ DEBUG [e6c02f11] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [f2083a14] Running /usr/bin/env echo "abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c" >> REVISION as app@54.199.217.53
+ DEBUG [f2083a14] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c" >> REVISION )
+  INFO [f2083a14] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [fb442f8b] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951 /var/www/exam03/releases/20170613021951/config as app@54.199.217.53
+ DEBUG [fb442f8b] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951 /var/www/exam03/releases/20170613021951/config )
+  INFO [fb442f8b] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [89fa7cff] Running [ -L /var/www/exam03/releases/20170613021951/.env ] as app@54.199.217.53
+ DEBUG [89fa7cff] Command: [ -L /var/www/exam03/releases/20170613021951/.env ]
+ DEBUG [89fa7cff] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [faeb3ec3] Running [ -f /var/www/exam03/releases/20170613021951/.env ] as app@54.199.217.53
+ DEBUG [faeb3ec3] Command: [ -f /var/www/exam03/releases/20170613021951/.env ]
+ DEBUG [faeb3ec3] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [32e6c328] Running /usr/bin/env rm /var/www/exam03/releases/20170613021951/.env as app@54.199.217.53
+ DEBUG [32e6c328] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/exam03/releases/20170613021951/.env )
+  INFO [32e6c328] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [53c59913] Running /usr/bin/env ln -s /var/www/exam03/shared/.env /var/www/exam03/releases/20170613021951/.env as app@54.199.217.53
+ DEBUG [53c59913] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/.env /var/www/exam03/releases/20170613021951/.env )
+  INFO [53c59913] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [6593bd61] Running [ -L /var/www/exam03/releases/20170613021951/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [6593bd61] Command: [ -L /var/www/exam03/releases/20170613021951/config/secrets.yml ]
+ DEBUG [6593bd61] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [b915ea47] Running [ -f /var/www/exam03/releases/20170613021951/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [b915ea47] Command: [ -f /var/www/exam03/releases/20170613021951/config/secrets.yml ]
+ DEBUG [b915ea47] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [776a4e66] Running /usr/bin/env rm /var/www/exam03/releases/20170613021951/config/secrets.yml as app@54.199.217.53
+ DEBUG [776a4e66] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/exam03/releases/20170613021951/config/secrets.yml )
+  INFO [776a4e66] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [c2b8357b] Running /usr/bin/env ln -s /var/www/exam03/shared/config/secrets.yml /var/www/exam03/releases/20170613021951/config/secrets.yml as app@54.199.217.53
+ DEBUG [c2b8357b] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/config/secrets.yml /var/www/exam03/releases/20170613021951/config/secrets.yml )
+  INFO [c2b8357b] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [fd15f285] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951 /var/www/exam03/releases/20170613021951/tmp /var/www/exam03/releases/20170613021951/public as app@54.199.217.53
+ DEBUG [fd15f285] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951 /var/www/exam03/releases/20170613021951/tmp /var/www/exam03/releases/20170613021951/public )
+  INFO [fd15f285] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [0ccfafd2] Running [ -L /var/www/exam03/releases/20170613021951/log ] as app@54.199.217.53
+ DEBUG [0ccfafd2] Command: [ -L /var/www/exam03/releases/20170613021951/log ]
+ DEBUG [0ccfafd2] Finished in 0.081 seconds with exit status 1 (failed).
+ DEBUG [857d003b] Running [ -d /var/www/exam03/releases/20170613021951/log ] as app@54.199.217.53
+ DEBUG [857d003b] Command: [ -d /var/www/exam03/releases/20170613021951/log ]
+ DEBUG [857d003b] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [12867691] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/log as app@54.199.217.53
+ DEBUG [12867691] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/log )
+  INFO [12867691] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [6b76dc9c] Running /usr/bin/env ln -s /var/www/exam03/shared/log /var/www/exam03/releases/20170613021951/log as app@54.199.217.53
+ DEBUG [6b76dc9c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/log /var/www/exam03/releases/20170613021951/log )
+  INFO [6b76dc9c] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [42b2db7a] Running [ -L /var/www/exam03/releases/20170613021951/tmp/pids ] as app@54.199.217.53
+ DEBUG [42b2db7a] Command: [ -L /var/www/exam03/releases/20170613021951/tmp/pids ]
+ DEBUG [42b2db7a] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [06a02b47] Running [ -d /var/www/exam03/releases/20170613021951/tmp/pids ] as app@54.199.217.53
+ DEBUG [06a02b47] Command: [ -d /var/www/exam03/releases/20170613021951/tmp/pids ]
+ DEBUG [06a02b47] Finished in 0.066 seconds with exit status 1 (failed).
+  INFO [fd43eec7] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/pids /var/www/exam03/releases/20170613021951/tmp/pids as app@54.199.217.53
+ DEBUG [fd43eec7] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/pids /var/www/exam03/releases/20170613021951/tmp/pids )
+  INFO [fd43eec7] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [ef75e859] Running [ -L /var/www/exam03/releases/20170613021951/tmp/cache ] as app@54.199.217.53
+ DEBUG [ef75e859] Command: [ -L /var/www/exam03/releases/20170613021951/tmp/cache ]
+ DEBUG [ef75e859] Finished in 0.062 seconds with exit status 1 (failed).
+ DEBUG [601b0f5d] Running [ -d /var/www/exam03/releases/20170613021951/tmp/cache ] as app@54.199.217.53
+ DEBUG [601b0f5d] Command: [ -d /var/www/exam03/releases/20170613021951/tmp/cache ]
+ DEBUG [601b0f5d] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [f1618fa9] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/tmp/cache as app@54.199.217.53
+ DEBUG [f1618fa9] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/tmp/cache )
+  INFO [f1618fa9] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [4e0e7eb6] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/cache /var/www/exam03/releases/20170613021951/tmp/cache as app@54.199.217.53
+ DEBUG [4e0e7eb6] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/cache /var/www/exam03/releases/20170613021951/tmp/cache )
+  INFO [4e0e7eb6] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [5c2675be] Running [ -L /var/www/exam03/releases/20170613021951/tmp/sockets ] as app@54.199.217.53
+ DEBUG [5c2675be] Command: [ -L /var/www/exam03/releases/20170613021951/tmp/sockets ]
+ DEBUG [5c2675be] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [52861537] Running [ -d /var/www/exam03/releases/20170613021951/tmp/sockets ] as app@54.199.217.53
+ DEBUG [52861537] Command: [ -d /var/www/exam03/releases/20170613021951/tmp/sockets ]
+ DEBUG [52861537] Finished in 0.069 seconds with exit status 1 (failed).
+  INFO [9253a58f] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/sockets /var/www/exam03/releases/20170613021951/tmp/sockets as app@54.199.217.53
+ DEBUG [9253a58f] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/sockets /var/www/exam03/releases/20170613021951/tmp/sockets )
+  INFO [9253a58f] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [570d198e] Running [ -L /var/www/exam03/releases/20170613021951/public/uploads ] as app@54.199.217.53
+ DEBUG [570d198e] Command: [ -L /var/www/exam03/releases/20170613021951/public/uploads ]
+ DEBUG [570d198e] Finished in 0.080 seconds with exit status 1 (failed).
+ DEBUG [ea86916d] Running [ -d /var/www/exam03/releases/20170613021951/public/uploads ] as app@54.199.217.53
+ DEBUG [ea86916d] Command: [ -d /var/www/exam03/releases/20170613021951/public/uploads ]
+ DEBUG [ea86916d] Finished in 0.250 seconds with exit status 0 (successful).
+  INFO [f5c38fe7] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/public/uploads as app@54.199.217.53
+ DEBUG [f5c38fe7] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/public/uploads )
+  INFO [f5c38fe7] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [92c89beb] Running /usr/bin/env ln -s /var/www/exam03/shared/public/uploads /var/www/exam03/releases/20170613021951/public/uploads as app@54.199.217.53
+ DEBUG [92c89beb] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/public/uploads /var/www/exam03/releases/20170613021951/public/uploads )
+  INFO [92c89beb] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [01f3db32] Running [ -L /var/www/exam03/releases/20170613021951/public/assets ] as app@54.199.217.53
+ DEBUG [01f3db32] Command: [ -L /var/www/exam03/releases/20170613021951/public/assets ]
+ DEBUG [01f3db32] Finished in 0.064 seconds with exit status 1 (failed).
+ DEBUG [26c226c4] Running [ -d /var/www/exam03/releases/20170613021951/public/assets ] as app@54.199.217.53
+ DEBUG [26c226c4] Command: [ -d /var/www/exam03/releases/20170613021951/public/assets ]
+ DEBUG [26c226c4] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [defeb802] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/public/assets as app@54.199.217.53
+ DEBUG [defeb802] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613021951/public/assets )
+  INFO [defeb802] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [91fb01e0] Running /usr/bin/env ln -s /var/www/exam03/shared/public/assets /var/www/exam03/releases/20170613021951/public/assets as app@54.199.217.53
+ DEBUG [91fb01e0] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/public/assets /var/www/exam03/releases/20170613021951/public/assets )
+  INFO [91fb01e0] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [e1363c9d] Running if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [e1363c9d] Command: if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi
+ DEBUG [e1363c9d] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [7a93ea5c] Running /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/exam03/shared/bundle as app@54.199.217.53
+ DEBUG [7a93ea5c] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/exam03/shared/bundle )
+ DEBUG [7a93ea5c] 	The following gems are missing
+ DEBUG [7a93ea5c] 	 * coderay (1.1.1)
+ DEBUG [7a93ea5c] 	 * method_source (0.8.2)
+ DEBUG [7a93ea5c] 	 * slop (3.6.0)
+ DEBUG [7a93ea5c] 	 * pry (0.10.4)
+ DEBUG [7a93ea5c] 	 * pry-rails (0.3.6)
+ DEBUG [7a93ea5c] 	 * debug_inspector (0.0.2)
+ DEBUG [7a93ea5c] 	 * binding_of_caller (0.7.2)
+ DEBUG [7a93ea5c] 	 * web-console (2.3.0)
+ DEBUG [7a93ea5c] 	 * public_suffix (2.0.5)
+ DEBUG [7a93ea5c] 	 * addressable (2.5.1)
+ DEBUG [7a93ea5c] 	 * launchy (2.4.3)
+ DEBUG [7a93ea5c] 	 * letter_opener (1.4.1)
+ DEBUG [7a93ea5c] 	 * letter_opener_web (1.3.1)
+ DEBUG [7a93ea5c] 	 * spring (2.0.1)
+ DEBUG [7a93ea5c] 	 * better_errors (2.1.1)
+ DEBUG [7a93ea5c] 	 * hirb (0.7.3)
+ DEBUG [7a93ea5c] 	 * unicode-display_width (0.1.1)
+ DEBUG [7a93ea5c] 	 * hirb-unicode (0.0.5)
+ DEBUG [7a93ea5c] 	 * net-ssh (4.1.0)
+ DEBUG [7a93ea5c] 	 * net-scp (1.2.1)
+ DEBUG [7a93ea5c] 	 * sshkit (1.13.1)
+ DEBUG [7a93ea5c] 	 * airbrussh (1.2.0)
+ DEBUG [7a93ea5c] 	 * capistrano-harrow (0.5.3)
+ DEBUG [7a93ea5c] 	 * capistrano (3.6.0)
+ DEBUG [7a93ea5c] 	 * capistrano-bundler (1.2.0)
+ DEBUG [7a93ea5c] 	 * capistrano-rails (1.2.3)
+ DEBUG [7a93ea5c] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [7a93ea5c] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [7a93ea5c] 	Install missing gems with `bundle install`
+ DEBUG [7a93ea5c] Finished in 0.352 seconds with exit status 1 (failed).
+  INFO [8f978ff7] Running /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/exam03/shared/bundle --without development test --deployment --quiet as app@54.199.217.53
+ DEBUG [8f978ff7] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/exam03/shared/bundle --without development test --deployment --quiet )
+  INFO [8f978ff7] Finished in 2.556 seconds with exit status 0 (successful).
+ DEBUG [d5c28b41] Running if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [d5c28b41] Command: if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi
+ DEBUG [d5c28b41] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [ea2edd29] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile as app@54.199.217.53
+ DEBUG [ea2edd29] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [ea2edd29] Finished in 3.157 seconds with exit status 0 (successful).
+ DEBUG [dc557608] Running if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [dc557608] Command: if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi
+ DEBUG [dc557608] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [bfcda1f6] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951/assets_manifest_backup as app@54.199.217.53
+ DEBUG [bfcda1f6] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613021951/assets_manifest_backup )
+  INFO [bfcda1f6] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [c2c17239] Running /usr/bin/env ls /var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest* as app@54.199.217.53
+ DEBUG [c2c17239] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest* )
+ DEBUG [c2c17239] 	/var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json
+ DEBUG [c2c17239] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [ac09f691] Running /usr/bin/env ls /var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest* as app@54.199.217.53
+ DEBUG [ac09f691] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest* )
+ DEBUG [ac09f691] 	/var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json
+ DEBUG [ac09f691] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [df36abe0] Running /usr/bin/env cp /var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json /var/www/exam03/releases/20170613021951/assets_manifest_backup as app@54.199.217.53
+ DEBUG [df36abe0] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cp /var/www/exam03/releases/20170613021951/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json /var/www/exam03/releases/20170613021951/assets_manifest_backup )
+  INFO [df36abe0] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [fd2d7a86] Running if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [fd2d7a86] Command: if test ! -d /var/www/exam03/releases/20170613021951; then echo "Directory does not exist '/var/www/exam03/releases/20170613021951'" 1>&2; false; fi
+ DEBUG [fd2d7a86] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [37353177] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate as app@54.199.217.53
+ DEBUG [37353177] Command: cd /var/www/exam03/releases/20170613021951 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [37353177] 	  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  INFO [37353177] Finished in 2.841 seconds with exit status 0 (successful).
+  INFO [59dfedce] Running /usr/bin/env ln -s /var/www/exam03/releases/20170613021951 /var/www/exam03/releases/current as app@54.199.217.53
+ DEBUG [59dfedce] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/releases/20170613021951 /var/www/exam03/releases/current )
+  INFO [59dfedce] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [a1ad90a6] Running /usr/bin/env mv /var/www/exam03/releases/current /var/www/exam03 as app@54.199.217.53
+ DEBUG [a1ad90a6] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mv /var/www/exam03/releases/current /var/www/exam03 )
+  INFO [a1ad90a6] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [9e51ff80] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [9e51ff80] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [9e51ff80] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [17984105] Running [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [17984105] Command: [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid`
+ DEBUG [17984105] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [92326ee5] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [92326ee5] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [92326ee5] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [0580c30d] Running /usr/bin/env kill -s USR2 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [0580c30d] Command: cd /var/www/exam03/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env kill -s USR2 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` )
+  INFO [0580c30d] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [a21ec96b] Running /usr/bin/env ls -xtr /var/www/exam03/releases as app@54.199.217.53
+ DEBUG [a21ec96b] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls -xtr /var/www/exam03/releases )
+ DEBUG [a21ec96b] 	20170612122055	20170612124040	20170612124311	20170612125040	20170612130155
+20170613021951
+ DEBUG [a21ec96b] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 54.199.217.53
+  INFO [0ffa9d34] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170612122055 as app@54.199.217.53
+ DEBUG [0ffa9d34] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170612122055 )
+  INFO [0ffa9d34] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [81fb06df] Running if test ! -d /var/www/exam03/releases; then echo "Directory does not exist '/var/www/exam03/releases'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [81fb06df] Command: if test ! -d /var/www/exam03/releases; then echo "Directory does not exist '/var/www/exam03/releases'" 1>&2; false; fi
+ DEBUG [81fb06df] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [32a8a266] Running /usr/bin/env echo "Branch master (at abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c) deployed as release 20170613021951 by yosi" >> /var/www/exam03/revisions.log as app@54.199.217.53
+ DEBUG [32a8a266] Command: cd /var/www/exam03/releases && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "Branch master (at abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c) deployed as release 20170613021951 by yosi" >> /var/www/exam03/revisions.log )
+  INFO [32a8a266] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-13 11:36:19 +0900 cap production unicorn:restart
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0c81b6bf] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@54.199.217.53
+ DEBUG [0c81b6bf] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [0c81b6bf] Finished in 0.370 seconds with exit status 0 (successful).
+ DEBUG [113d9b89] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [113d9b89] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [113d9b89] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [b0365c6a] Running [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [b0365c6a] Command: [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid`
+ DEBUG [b0365c6a] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [dce4845a] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [dce4845a] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [dce4845a] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [f2b8595f] Running /usr/bin/env kill -s USR2 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [f2b8595f] Command: cd /var/www/exam03/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env kill -s USR2 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` )
+  INFO [f2b8595f] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-13 11:42:34 +0900 cap production unicorn:start
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2afb407c] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@54.199.217.53
+ DEBUG [2afb407c] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [2afb407c] Finished in 0.300 seconds with exit status 0 (successful).
+ DEBUG [bc7275ba] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [bc7275ba] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [bc7275ba] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [d86f277a] Running [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [d86f277a] Command: [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid`
+ DEBUG [d86f277a] Finished in 0.065 seconds with exit status 1 (failed).
+  INFO [8d94fcb9] Running /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/exam03/current/config/unicorn/production.rb -E deployment -D  as app@54.199.217.53
+ DEBUG [8d94fcb9] Command: cd /var/www/exam03/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/exam03/current/config/unicorn/production.rb -E deployment -D  )
+ DEBUG [8d94fcb9] 	master failed to start, check stderr log for details
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-13 11:42:59 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [514b76d9] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@54.199.217.53
+ DEBUG [514b76d9] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [514b76d9] Finished in 0.331 seconds with exit status 0 (successful).
+  INFO [ac23f066] Running /usr/bin/env mkdir -p /tmp as app@54.199.217.53
+ DEBUG [ac23f066] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [ac23f066] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-exam03-production-yosi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-exam03-production-yosi.sh 100.0%
+  INFO [ca98b640] Running /usr/bin/env chmod 700 /tmp/git-ssh-exam03-production-yosi.sh as app@54.199.217.53
+ DEBUG [ca98b640] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-exam03-production-yosi.sh )
+  INFO [ca98b640] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [295c2889] Running /usr/bin/env git ls-remote --heads https://github.com/psychedelicagogoparty/exam03 as app@54.199.217.53
+ DEBUG [295c2889] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git ls-remote --heads https://github.com/psychedelicagogoparty/exam03 )
+ DEBUG [295c2889] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c	refs/heads/master
+  INFO [295c2889] Finished in 1.063 seconds with exit status 0 (successful).
+  INFO [4c738294] Running /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/releases as app@54.199.217.53
+ DEBUG [4c738294] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/releases )
+  INFO [4c738294] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [8a11effb] Running /usr/bin/env mkdir -p /var/www/exam03/shared/log /var/www/exam03/shared/tmp/pids /var/www/exam03/shared/tmp/cache /var/www/exam03/shared/tmp/sockets /var/www/exam03/shared/public/uploads /var/www/exam03/shared/public/assets as app@54.199.217.53
+ DEBUG [8a11effb] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared/log /var/www/exam03/shared/tmp/pids /var/www/exam03/shared/tmp/cache /var/www/exam03/shared/tmp/sockets /var/www/exam03/shared/public/uploads /var/www/exam03/shared/public/assets )
+  INFO [8a11effb] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [62f49fc3] Running /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/shared/config as app@54.199.217.53
+ DEBUG [62f49fc3] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/shared/config )
+  INFO [62f49fc3] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [45102bea] Running [ -f /var/www/exam03/shared/.env ] as app@54.199.217.53
+ DEBUG [45102bea] Command: [ -f /var/www/exam03/shared/.env ]
+ DEBUG [45102bea] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [0dd8bb13] Running [ -f /var/www/exam03/shared/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [0dd8bb13] Command: [ -f /var/www/exam03/shared/config/secrets.yml ]
+ DEBUG [0dd8bb13] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [5ccaff6c] Running [ -f /var/www/exam03/current/REVISION ] as app@54.199.217.53
+ DEBUG [5ccaff6c] Command: [ -f /var/www/exam03/current/REVISION ]
+ DEBUG [5ccaff6c] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [ba7b397c] Running /usr/bin/env cat /var/www/exam03/current/REVISION 2>/dev/null as app@54.199.217.53
+ DEBUG [ba7b397c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cat /var/www/exam03/current/REVISION 2>/dev/null )
+ DEBUG [ba7b397c] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c
+ DEBUG [ba7b397c] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [cc924ba5] Running [ -f /var/www/exam03/repo/HEAD ] as app@54.199.217.53
+ DEBUG [cc924ba5] Command: [ -f /var/www/exam03/repo/HEAD ]
+ DEBUG [cc924ba5] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/exam03/repo
+ DEBUG [ab36ed91] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [ab36ed91] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [ab36ed91] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [5f0bf1f9] Running /usr/bin/env git remote update --prune as app@54.199.217.53
+ DEBUG [5f0bf1f9] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5f0bf1f9] 	Fetching origin
+  INFO [5f0bf1f9] Finished in 0.628 seconds with exit status 0 (successful).
+ DEBUG [b76060e3] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [b76060e3] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [b76060e3] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [13bdc195] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301 as app@54.199.217.53
+ DEBUG [13bdc195] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301 )
+  INFO [13bdc195] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [96217088] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/exam03/releases/20170613024301 as app@54.199.217.53
+ DEBUG [96217088] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/exam03/releases/20170613024301 )
+  INFO [96217088] Finished in 0.538 seconds with exit status 0 (successful).
+ DEBUG [90044d49] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [90044d49] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [90044d49] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [dd4472fe] Running /usr/bin/env git rev-list --max-count=1 master as app@54.199.217.53
+ DEBUG [dd4472fe] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [dd4472fe] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c
+ DEBUG [dd4472fe] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [ca0aecb8] Running if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [ca0aecb8] Command: if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi
+ DEBUG [ca0aecb8] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [aad5709d] Running /usr/bin/env echo "abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c" >> REVISION as app@54.199.217.53
+ DEBUG [aad5709d] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c" >> REVISION )
+  INFO [aad5709d] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [e98bf374] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301 /var/www/exam03/releases/20170613024301/config as app@54.199.217.53
+ DEBUG [e98bf374] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301 /var/www/exam03/releases/20170613024301/config )
+  INFO [e98bf374] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [1388442e] Running [ -L /var/www/exam03/releases/20170613024301/.env ] as app@54.199.217.53
+ DEBUG [1388442e] Command: [ -L /var/www/exam03/releases/20170613024301/.env ]
+ DEBUG [1388442e] Finished in 0.066 seconds with exit status 1 (failed).
+ DEBUG [9781c01e] Running [ -f /var/www/exam03/releases/20170613024301/.env ] as app@54.199.217.53
+ DEBUG [9781c01e] Command: [ -f /var/www/exam03/releases/20170613024301/.env ]
+ DEBUG [9781c01e] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [9b49520b] Running /usr/bin/env rm /var/www/exam03/releases/20170613024301/.env as app@54.199.217.53
+ DEBUG [9b49520b] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/exam03/releases/20170613024301/.env )
+  INFO [9b49520b] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [d153c311] Running /usr/bin/env ln -s /var/www/exam03/shared/.env /var/www/exam03/releases/20170613024301/.env as app@54.199.217.53
+ DEBUG [d153c311] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/.env /var/www/exam03/releases/20170613024301/.env )
+  INFO [d153c311] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [e3976f60] Running [ -L /var/www/exam03/releases/20170613024301/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [e3976f60] Command: [ -L /var/www/exam03/releases/20170613024301/config/secrets.yml ]
+ DEBUG [e3976f60] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [9c4a87a4] Running [ -f /var/www/exam03/releases/20170613024301/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [9c4a87a4] Command: [ -f /var/www/exam03/releases/20170613024301/config/secrets.yml ]
+ DEBUG [9c4a87a4] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [f73b244f] Running /usr/bin/env rm /var/www/exam03/releases/20170613024301/config/secrets.yml as app@54.199.217.53
+ DEBUG [f73b244f] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/exam03/releases/20170613024301/config/secrets.yml )
+  INFO [f73b244f] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [489f0194] Running /usr/bin/env ln -s /var/www/exam03/shared/config/secrets.yml /var/www/exam03/releases/20170613024301/config/secrets.yml as app@54.199.217.53
+ DEBUG [489f0194] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/config/secrets.yml /var/www/exam03/releases/20170613024301/config/secrets.yml )
+  INFO [489f0194] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [19348eb2] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301 /var/www/exam03/releases/20170613024301/tmp /var/www/exam03/releases/20170613024301/public as app@54.199.217.53
+ DEBUG [19348eb2] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301 /var/www/exam03/releases/20170613024301/tmp /var/www/exam03/releases/20170613024301/public )
+  INFO [19348eb2] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [15704fba] Running [ -L /var/www/exam03/releases/20170613024301/log ] as app@54.199.217.53
+ DEBUG [15704fba] Command: [ -L /var/www/exam03/releases/20170613024301/log ]
+ DEBUG [15704fba] Finished in 0.068 seconds with exit status 1 (failed).
+ DEBUG [b02bfd21] Running [ -d /var/www/exam03/releases/20170613024301/log ] as app@54.199.217.53
+ DEBUG [b02bfd21] Command: [ -d /var/www/exam03/releases/20170613024301/log ]
+ DEBUG [b02bfd21] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [6280c0ef] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/log as app@54.199.217.53
+ DEBUG [6280c0ef] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/log )
+  INFO [6280c0ef] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [a6ba569a] Running /usr/bin/env ln -s /var/www/exam03/shared/log /var/www/exam03/releases/20170613024301/log as app@54.199.217.53
+ DEBUG [a6ba569a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/log /var/www/exam03/releases/20170613024301/log )
+  INFO [a6ba569a] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [872cdfa6] Running [ -L /var/www/exam03/releases/20170613024301/tmp/pids ] as app@54.199.217.53
+ DEBUG [872cdfa6] Command: [ -L /var/www/exam03/releases/20170613024301/tmp/pids ]
+ DEBUG [872cdfa6] Finished in 0.069 seconds with exit status 1 (failed).
+ DEBUG [79c77ec6] Running [ -d /var/www/exam03/releases/20170613024301/tmp/pids ] as app@54.199.217.53
+ DEBUG [79c77ec6] Command: [ -d /var/www/exam03/releases/20170613024301/tmp/pids ]
+ DEBUG [79c77ec6] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [5218867e] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/pids /var/www/exam03/releases/20170613024301/tmp/pids as app@54.199.217.53
+ DEBUG [5218867e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/pids /var/www/exam03/releases/20170613024301/tmp/pids )
+  INFO [5218867e] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [65785621] Running [ -L /var/www/exam03/releases/20170613024301/tmp/cache ] as app@54.199.217.53
+ DEBUG [65785621] Command: [ -L /var/www/exam03/releases/20170613024301/tmp/cache ]
+ DEBUG [65785621] Finished in 0.071 seconds with exit status 1 (failed).
+ DEBUG [ccba6716] Running [ -d /var/www/exam03/releases/20170613024301/tmp/cache ] as app@54.199.217.53
+ DEBUG [ccba6716] Command: [ -d /var/www/exam03/releases/20170613024301/tmp/cache ]
+ DEBUG [ccba6716] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [72882e1a] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/tmp/cache as app@54.199.217.53
+ DEBUG [72882e1a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/tmp/cache )
+  INFO [72882e1a] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [c952c7da] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/cache /var/www/exam03/releases/20170613024301/tmp/cache as app@54.199.217.53
+ DEBUG [c952c7da] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/cache /var/www/exam03/releases/20170613024301/tmp/cache )
+  INFO [c952c7da] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [22cd2be2] Running [ -L /var/www/exam03/releases/20170613024301/tmp/sockets ] as app@54.199.217.53
+ DEBUG [22cd2be2] Command: [ -L /var/www/exam03/releases/20170613024301/tmp/sockets ]
+ DEBUG [22cd2be2] Finished in 0.073 seconds with exit status 1 (failed).
+ DEBUG [55f25d40] Running [ -d /var/www/exam03/releases/20170613024301/tmp/sockets ] as app@54.199.217.53
+ DEBUG [55f25d40] Command: [ -d /var/www/exam03/releases/20170613024301/tmp/sockets ]
+ DEBUG [55f25d40] Finished in 0.066 seconds with exit status 1 (failed).
+  INFO [e5740113] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/sockets /var/www/exam03/releases/20170613024301/tmp/sockets as app@54.199.217.53
+ DEBUG [e5740113] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/sockets /var/www/exam03/releases/20170613024301/tmp/sockets )
+  INFO [e5740113] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [6901bcec] Running [ -L /var/www/exam03/releases/20170613024301/public/uploads ] as app@54.199.217.53
+ DEBUG [6901bcec] Command: [ -L /var/www/exam03/releases/20170613024301/public/uploads ]
+ DEBUG [6901bcec] Finished in 0.061 seconds with exit status 1 (failed).
+ DEBUG [e27fe19b] Running [ -d /var/www/exam03/releases/20170613024301/public/uploads ] as app@54.199.217.53
+ DEBUG [e27fe19b] Command: [ -d /var/www/exam03/releases/20170613024301/public/uploads ]
+ DEBUG [e27fe19b] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [19218d1a] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/public/uploads as app@54.199.217.53
+ DEBUG [19218d1a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/public/uploads )
+  INFO [19218d1a] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [b18c17c5] Running /usr/bin/env ln -s /var/www/exam03/shared/public/uploads /var/www/exam03/releases/20170613024301/public/uploads as app@54.199.217.53
+ DEBUG [b18c17c5] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/public/uploads /var/www/exam03/releases/20170613024301/public/uploads )
+  INFO [b18c17c5] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [f0b08054] Running [ -L /var/www/exam03/releases/20170613024301/public/assets ] as app@54.199.217.53
+ DEBUG [f0b08054] Command: [ -L /var/www/exam03/releases/20170613024301/public/assets ]
+ DEBUG [f0b08054] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [aace399c] Running [ -d /var/www/exam03/releases/20170613024301/public/assets ] as app@54.199.217.53
+ DEBUG [aace399c] Command: [ -d /var/www/exam03/releases/20170613024301/public/assets ]
+ DEBUG [aace399c] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [d55350a0] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/public/assets as app@54.199.217.53
+ DEBUG [d55350a0] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024301/public/assets )
+  INFO [d55350a0] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [fb9b93b8] Running /usr/bin/env ln -s /var/www/exam03/shared/public/assets /var/www/exam03/releases/20170613024301/public/assets as app@54.199.217.53
+ DEBUG [fb9b93b8] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/public/assets /var/www/exam03/releases/20170613024301/public/assets )
+  INFO [fb9b93b8] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [dae7dcbe] Running if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [dae7dcbe] Command: if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi
+ DEBUG [dae7dcbe] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [6efdd860] Running /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/exam03/shared/bundle as app@54.199.217.53
+ DEBUG [6efdd860] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/exam03/shared/bundle )
+ DEBUG [6efdd860] 	The following gems are missing
+ DEBUG [6efdd860] 	 * coderay (1.1.1)
+ DEBUG [6efdd860] 	 * method_source (0.8.2)
+ DEBUG [6efdd860] 	 * slop (3.6.0)
+ DEBUG [6efdd860] 	 * pry (0.10.4)
+ DEBUG [6efdd860] 	 * pry-rails (0.3.6)
+ DEBUG [6efdd860] 	 * debug_inspector (0.0.2)
+ DEBUG [6efdd860] 	 * binding_of_caller (0.7.2)
+ DEBUG [6efdd860] 	 * web-console (2.3.0)
+ DEBUG [6efdd860] 	 * public_suffix (2.0.5)
+ DEBUG [6efdd860] 	 * addressable (2.5.1)
+ DEBUG [6efdd860] 	 * launchy (2.4.3)
+ DEBUG [6efdd860] 	 * letter_opener (1.4.1)
+ DEBUG [6efdd860] 	 * letter_opener_web (1.3.1)
+ DEBUG [6efdd860] 	 * spring (2.0.1)
+ DEBUG [6efdd860] 	 * better_errors (2.1.1)
+ DEBUG [6efdd860] 	 * hirb (0.7.3)
+ DEBUG [6efdd860] 	 * unicode-display_width (0.1.1)
+ DEBUG [6efdd860] 	 * hirb-unicode (0.0.5)
+ DEBUG [6efdd860] 	 * net-ssh (4.1.0)
+ DEBUG [6efdd860] 	 * net-scp (1.2.1)
+ DEBUG [6efdd860] 	 * sshkit (1.13.1)
+ DEBUG [6efdd860] 	 * airbrussh (1.2.0)
+ DEBUG [6efdd860] 	 * capistrano-harrow (0.5.3)
+ DEBUG [6efdd860] 	 * capistrano (3.6.0)
+ DEBUG [6efdd860] 	 * capistrano-bundler (1.2.0)
+ DEBUG [6efdd860] 	 * capistrano-rails (1.2.3)
+ DEBUG [6efdd860] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [6efdd860] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [6efdd860] 	Install missing gems with `bundle install`
+ DEBUG [6efdd860] Finished in 0.532 seconds with exit status 1 (failed).
+  INFO [89dd9acf] Running /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/exam03/shared/bundle --without development test --deployment --quiet as app@54.199.217.53
+ DEBUG [89dd9acf] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/exam03/shared/bundle --without development test --deployment --quiet )
+  INFO [89dd9acf] Finished in 2.818 seconds with exit status 0 (successful).
+ DEBUG [1e992386] Running if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [1e992386] Command: if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi
+ DEBUG [1e992386] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [aa98c2fc] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile as app@54.199.217.53
+ DEBUG [aa98c2fc] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [aa98c2fc] Finished in 3.683 seconds with exit status 0 (successful).
+ DEBUG [dbd8cc00] Running if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [dbd8cc00] Command: if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi
+ DEBUG [dbd8cc00] Finished in 0.344 seconds with exit status 0 (successful).
+  INFO [c713420c] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301/assets_manifest_backup as app@54.199.217.53
+ DEBUG [c713420c] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024301/assets_manifest_backup )
+  INFO [c713420c] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [f2e0701e] Running /usr/bin/env ls /var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest* as app@54.199.217.53
+ DEBUG [f2e0701e] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest* )
+ DEBUG [f2e0701e] 	/var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json
+ DEBUG [f2e0701e] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [b87ed94a] Running /usr/bin/env ls /var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest* as app@54.199.217.53
+ DEBUG [b87ed94a] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest* )
+ DEBUG [b87ed94a] 	/var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json
+ DEBUG [b87ed94a] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [0659d7d5] Running /usr/bin/env cp /var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json /var/www/exam03/releases/20170613024301/assets_manifest_backup as app@54.199.217.53
+ DEBUG [0659d7d5] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cp /var/www/exam03/releases/20170613024301/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json /var/www/exam03/releases/20170613024301/assets_manifest_backup )
+  INFO [0659d7d5] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [72e3b501] Running if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [72e3b501] Command: if test ! -d /var/www/exam03/releases/20170613024301; then echo "Directory does not exist '/var/www/exam03/releases/20170613024301'" 1>&2; false; fi
+ DEBUG [72e3b501] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [5a01c1a4] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate as app@54.199.217.53
+ DEBUG [5a01c1a4] Command: cd /var/www/exam03/releases/20170613024301 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [5a01c1a4] 	rake aborted!
+ DEBUG [5a01c1a4] 	PG::ConnectionBad: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+ DEBUG [5a01c1a4] 	/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_handling.rb:87:in `connection'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/migration.rb:916:in `initialize'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/migration.rb:823:in `new'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/migration.rb:823:in `up'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/migration.rb:801:in `migrate'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/tasks/database_tasks.rb:137:in `migrate'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/railties/databases.rake:44:in `block (2 levels) in <top (required)>'
+/var/www/exam03/shared/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/usr/local/rbenv/versions/2.3.0/bin/bundle:23:in `load'
+/usr/local/rbenv/versions/2.3.0/bin/bundle:23:in `<main>'
+ DEBUG [5a01c1a4] 	Tasks: TOP => db:migrate
+ DEBUG [5a01c1a4] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-13 11:43:45 +0900 cap production unicorn:start
+  INFO ---------------------------------------------------------------------------
+ DEBUG [09ae0dc5] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@54.199.217.53
+ DEBUG [09ae0dc5] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [09ae0dc5] Finished in 0.318 seconds with exit status 0 (successful).
+ DEBUG [a4e2d680] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [a4e2d680] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [a4e2d680] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [3ba94e55] Running [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [3ba94e55] Command: [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid`
+ DEBUG [3ba94e55] 	bash: 0 行: kill: (3159) - そのようなプロセスはありません
+ DEBUG [3ba94e55] Finished in 0.073 seconds with exit status 1 (failed).
+  INFO [1fe3c655] Running /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/exam03/current/config/unicorn/production.rb -E deployment -D  as app@54.199.217.53
+ DEBUG [1fe3c655] Command: cd /var/www/exam03/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/exam03/current/config/unicorn/production.rb -E deployment -D  )
+  INFO [1fe3c655] Finished in 3.317 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-13 11:48:22 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7d7c855e] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@54.199.217.53
+ DEBUG [7d7c855e] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [7d7c855e] Finished in 0.360 seconds with exit status 0 (successful).
+  INFO [b0346f5b] Running /usr/bin/env mkdir -p /tmp as app@54.199.217.53
+ DEBUG [b0346f5b] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [b0346f5b] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-exam03-production-yosi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-exam03-production-yosi.sh 100.0%
+  INFO [c29b2fcd] Running /usr/bin/env chmod 700 /tmp/git-ssh-exam03-production-yosi.sh as app@54.199.217.53
+ DEBUG [c29b2fcd] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-exam03-production-yosi.sh )
+  INFO [c29b2fcd] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [fb2909bf] Running /usr/bin/env git ls-remote --heads https://github.com/psychedelicagogoparty/exam03 as app@54.199.217.53
+ DEBUG [fb2909bf] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git ls-remote --heads https://github.com/psychedelicagogoparty/exam03 )
+ DEBUG [fb2909bf] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c	refs/heads/master
+  INFO [fb2909bf] Finished in 0.723 seconds with exit status 0 (successful).
+  INFO [b86ab407] Running /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/releases as app@54.199.217.53
+ DEBUG [b86ab407] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/releases )
+  INFO [b86ab407] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [7d02160a] Running /usr/bin/env mkdir -p /var/www/exam03/shared/log /var/www/exam03/shared/tmp/pids /var/www/exam03/shared/tmp/cache /var/www/exam03/shared/tmp/sockets /var/www/exam03/shared/public/uploads /var/www/exam03/shared/public/assets as app@54.199.217.53
+ DEBUG [7d02160a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared/log /var/www/exam03/shared/tmp/pids /var/www/exam03/shared/tmp/cache /var/www/exam03/shared/tmp/sockets /var/www/exam03/shared/public/uploads /var/www/exam03/shared/public/assets )
+  INFO [7d02160a] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [aab64e5a] Running /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/shared/config as app@54.199.217.53
+ DEBUG [aab64e5a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/shared /var/www/exam03/shared/config )
+  INFO [aab64e5a] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [856e9141] Running [ -f /var/www/exam03/shared/.env ] as app@54.199.217.53
+ DEBUG [856e9141] Command: [ -f /var/www/exam03/shared/.env ]
+ DEBUG [856e9141] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [a8f7944f] Running [ -f /var/www/exam03/shared/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [a8f7944f] Command: [ -f /var/www/exam03/shared/config/secrets.yml ]
+ DEBUG [a8f7944f] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [89b0f336] Running [ -f /var/www/exam03/current/REVISION ] as app@54.199.217.53
+ DEBUG [89b0f336] Command: [ -f /var/www/exam03/current/REVISION ]
+ DEBUG [89b0f336] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [12581856] Running /usr/bin/env cat /var/www/exam03/current/REVISION 2>/dev/null as app@54.199.217.53
+ DEBUG [12581856] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cat /var/www/exam03/current/REVISION 2>/dev/null )
+ DEBUG [12581856] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c
+ DEBUG [12581856] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [02e66033] Running [ -f /var/www/exam03/repo/HEAD ] as app@54.199.217.53
+ DEBUG [02e66033] Command: [ -f /var/www/exam03/repo/HEAD ]
+ DEBUG [02e66033] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/exam03/repo
+ DEBUG [04e04957] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [04e04957] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [04e04957] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [8629f9cb] Running /usr/bin/env git remote update --prune as app@54.199.217.53
+ DEBUG [8629f9cb] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8629f9cb] 	Fetching origin
+  INFO [8629f9cb] Finished in 0.600 seconds with exit status 0 (successful).
+ DEBUG [f59d7dd3] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [f59d7dd3] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [f59d7dd3] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [68d67495] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824 as app@54.199.217.53
+ DEBUG [68d67495] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824 )
+  INFO [68d67495] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [9a49a553] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/exam03/releases/20170613024824 as app@54.199.217.53
+ DEBUG [9a49a553] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/exam03/releases/20170613024824 )
+  INFO [9a49a553] Finished in 0.541 seconds with exit status 0 (successful).
+ DEBUG [93888d83] Running if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [93888d83] Command: if test ! -d /var/www/exam03/repo; then echo "Directory does not exist '/var/www/exam03/repo'" 1>&2; false; fi
+ DEBUG [93888d83] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [d48449f6] Running /usr/bin/env git rev-list --max-count=1 master as app@54.199.217.53
+ DEBUG [d48449f6] Command: cd /var/www/exam03/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-exam03-production-yosi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d48449f6] 	abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c
+ DEBUG [d48449f6] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [26519024] Running if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [26519024] Command: if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi
+ DEBUG [26519024] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [363c3b94] Running /usr/bin/env echo "abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c" >> REVISION as app@54.199.217.53
+ DEBUG [363c3b94] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c" >> REVISION )
+  INFO [363c3b94] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [f6bfeafd] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824 /var/www/exam03/releases/20170613024824/config as app@54.199.217.53
+ DEBUG [f6bfeafd] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824 /var/www/exam03/releases/20170613024824/config )
+  INFO [f6bfeafd] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [103cb709] Running [ -L /var/www/exam03/releases/20170613024824/.env ] as app@54.199.217.53
+ DEBUG [103cb709] Command: [ -L /var/www/exam03/releases/20170613024824/.env ]
+ DEBUG [103cb709] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [bbd5bd70] Running [ -f /var/www/exam03/releases/20170613024824/.env ] as app@54.199.217.53
+ DEBUG [bbd5bd70] Command: [ -f /var/www/exam03/releases/20170613024824/.env ]
+ DEBUG [bbd5bd70] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [4c8c207e] Running /usr/bin/env rm /var/www/exam03/releases/20170613024824/.env as app@54.199.217.53
+ DEBUG [4c8c207e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/exam03/releases/20170613024824/.env )
+  INFO [4c8c207e] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [06a744a5] Running /usr/bin/env ln -s /var/www/exam03/shared/.env /var/www/exam03/releases/20170613024824/.env as app@54.199.217.53
+ DEBUG [06a744a5] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/.env /var/www/exam03/releases/20170613024824/.env )
+  INFO [06a744a5] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [fb7bdcc6] Running [ -L /var/www/exam03/releases/20170613024824/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [fb7bdcc6] Command: [ -L /var/www/exam03/releases/20170613024824/config/secrets.yml ]
+ DEBUG [fb7bdcc6] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [55b157ff] Running [ -f /var/www/exam03/releases/20170613024824/config/secrets.yml ] as app@54.199.217.53
+ DEBUG [55b157ff] Command: [ -f /var/www/exam03/releases/20170613024824/config/secrets.yml ]
+ DEBUG [55b157ff] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [6e2e8667] Running /usr/bin/env rm /var/www/exam03/releases/20170613024824/config/secrets.yml as app@54.199.217.53
+ DEBUG [6e2e8667] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/exam03/releases/20170613024824/config/secrets.yml )
+  INFO [6e2e8667] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [fb2f6198] Running /usr/bin/env ln -s /var/www/exam03/shared/config/secrets.yml /var/www/exam03/releases/20170613024824/config/secrets.yml as app@54.199.217.53
+ DEBUG [fb2f6198] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/config/secrets.yml /var/www/exam03/releases/20170613024824/config/secrets.yml )
+  INFO [fb2f6198] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [92a75a9e] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824 /var/www/exam03/releases/20170613024824/tmp /var/www/exam03/releases/20170613024824/public as app@54.199.217.53
+ DEBUG [92a75a9e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824 /var/www/exam03/releases/20170613024824/tmp /var/www/exam03/releases/20170613024824/public )
+  INFO [92a75a9e] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [9fab0b9f] Running [ -L /var/www/exam03/releases/20170613024824/log ] as app@54.199.217.53
+ DEBUG [9fab0b9f] Command: [ -L /var/www/exam03/releases/20170613024824/log ]
+ DEBUG [9fab0b9f] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [984534a8] Running [ -d /var/www/exam03/releases/20170613024824/log ] as app@54.199.217.53
+ DEBUG [984534a8] Command: [ -d /var/www/exam03/releases/20170613024824/log ]
+ DEBUG [984534a8] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [f8fa17cc] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/log as app@54.199.217.53
+ DEBUG [f8fa17cc] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/log )
+  INFO [f8fa17cc] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [79292e1c] Running /usr/bin/env ln -s /var/www/exam03/shared/log /var/www/exam03/releases/20170613024824/log as app@54.199.217.53
+ DEBUG [79292e1c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/log /var/www/exam03/releases/20170613024824/log )
+  INFO [79292e1c] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [ad9fe942] Running [ -L /var/www/exam03/releases/20170613024824/tmp/pids ] as app@54.199.217.53
+ DEBUG [ad9fe942] Command: [ -L /var/www/exam03/releases/20170613024824/tmp/pids ]
+ DEBUG [ad9fe942] Finished in 0.074 seconds with exit status 1 (failed).
+ DEBUG [1afa2e72] Running [ -d /var/www/exam03/releases/20170613024824/tmp/pids ] as app@54.199.217.53
+ DEBUG [1afa2e72] Command: [ -d /var/www/exam03/releases/20170613024824/tmp/pids ]
+ DEBUG [1afa2e72] Finished in 0.100 seconds with exit status 1 (failed).
+  INFO [1eb1c098] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/pids /var/www/exam03/releases/20170613024824/tmp/pids as app@54.199.217.53
+ DEBUG [1eb1c098] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/pids /var/www/exam03/releases/20170613024824/tmp/pids )
+  INFO [1eb1c098] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [ad30fe21] Running [ -L /var/www/exam03/releases/20170613024824/tmp/cache ] as app@54.199.217.53
+ DEBUG [ad30fe21] Command: [ -L /var/www/exam03/releases/20170613024824/tmp/cache ]
+ DEBUG [ad30fe21] Finished in 0.062 seconds with exit status 1 (failed).
+ DEBUG [b51e2340] Running [ -d /var/www/exam03/releases/20170613024824/tmp/cache ] as app@54.199.217.53
+ DEBUG [b51e2340] Command: [ -d /var/www/exam03/releases/20170613024824/tmp/cache ]
+ DEBUG [b51e2340] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [65f613ef] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/tmp/cache as app@54.199.217.53
+ DEBUG [65f613ef] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/tmp/cache )
+  INFO [65f613ef] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [7ee229b9] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/cache /var/www/exam03/releases/20170613024824/tmp/cache as app@54.199.217.53
+ DEBUG [7ee229b9] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/cache /var/www/exam03/releases/20170613024824/tmp/cache )
+  INFO [7ee229b9] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [32c97b8b] Running [ -L /var/www/exam03/releases/20170613024824/tmp/sockets ] as app@54.199.217.53
+ DEBUG [32c97b8b] Command: [ -L /var/www/exam03/releases/20170613024824/tmp/sockets ]
+ DEBUG [32c97b8b] Finished in 0.062 seconds with exit status 1 (failed).
+ DEBUG [528413d9] Running [ -d /var/www/exam03/releases/20170613024824/tmp/sockets ] as app@54.199.217.53
+ DEBUG [528413d9] Command: [ -d /var/www/exam03/releases/20170613024824/tmp/sockets ]
+ DEBUG [528413d9] Finished in 0.061 seconds with exit status 1 (failed).
+  INFO [689cc43a] Running /usr/bin/env ln -s /var/www/exam03/shared/tmp/sockets /var/www/exam03/releases/20170613024824/tmp/sockets as app@54.199.217.53
+ DEBUG [689cc43a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/tmp/sockets /var/www/exam03/releases/20170613024824/tmp/sockets )
+  INFO [689cc43a] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [706fdb51] Running [ -L /var/www/exam03/releases/20170613024824/public/uploads ] as app@54.199.217.53
+ DEBUG [706fdb51] Command: [ -L /var/www/exam03/releases/20170613024824/public/uploads ]
+ DEBUG [706fdb51] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [9c5316d0] Running [ -d /var/www/exam03/releases/20170613024824/public/uploads ] as app@54.199.217.53
+ DEBUG [9c5316d0] Command: [ -d /var/www/exam03/releases/20170613024824/public/uploads ]
+ DEBUG [9c5316d0] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [5f18112d] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/public/uploads as app@54.199.217.53
+ DEBUG [5f18112d] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/public/uploads )
+  INFO [5f18112d] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [9debf0c7] Running /usr/bin/env ln -s /var/www/exam03/shared/public/uploads /var/www/exam03/releases/20170613024824/public/uploads as app@54.199.217.53
+ DEBUG [9debf0c7] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/public/uploads /var/www/exam03/releases/20170613024824/public/uploads )
+  INFO [9debf0c7] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [f00d39c1] Running [ -L /var/www/exam03/releases/20170613024824/public/assets ] as app@54.199.217.53
+ DEBUG [f00d39c1] Command: [ -L /var/www/exam03/releases/20170613024824/public/assets ]
+ DEBUG [f00d39c1] Finished in 0.062 seconds with exit status 1 (failed).
+ DEBUG [a63d9574] Running [ -d /var/www/exam03/releases/20170613024824/public/assets ] as app@54.199.217.53
+ DEBUG [a63d9574] Command: [ -d /var/www/exam03/releases/20170613024824/public/assets ]
+ DEBUG [a63d9574] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [f6ae1274] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/public/assets as app@54.199.217.53
+ DEBUG [f6ae1274] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170613024824/public/assets )
+  INFO [f6ae1274] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [741f23b2] Running /usr/bin/env ln -s /var/www/exam03/shared/public/assets /var/www/exam03/releases/20170613024824/public/assets as app@54.199.217.53
+ DEBUG [741f23b2] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/shared/public/assets /var/www/exam03/releases/20170613024824/public/assets )
+  INFO [741f23b2] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [49b4c617] Running if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [49b4c617] Command: if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi
+ DEBUG [49b4c617] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [ad498c3c] Running /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/exam03/shared/bundle as app@54.199.217.53
+ DEBUG [ad498c3c] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/exam03/shared/bundle )
+ DEBUG [ad498c3c] 	The following gems are missing
+ DEBUG [ad498c3c] 	 * coderay (1.1.1)
+ DEBUG [ad498c3c] 	 * method_source (0.8.2)
+ DEBUG [ad498c3c] 	 * slop (3.6.0)
+ DEBUG [ad498c3c] 	 * pry (0.10.4)
+ DEBUG [ad498c3c] 	 * pry-rails (0.3.6)
+ DEBUG [ad498c3c] 	 * debug_inspector (0.0.2)
+ DEBUG [ad498c3c] 	 * binding_of_caller (0.7.2)
+ DEBUG [ad498c3c] 	 * web-console (2.3.0)
+ DEBUG [ad498c3c] 	 * public_suffix (2.0.5)
+ DEBUG [ad498c3c] 	 * addressable (2.5.1)
+ DEBUG [ad498c3c] 	 * launchy (2.4.3)
+ DEBUG [ad498c3c] 	 * letter_opener (1.4.1)
+ DEBUG [ad498c3c] 	 * letter_opener_web (1.3.1)
+ DEBUG [ad498c3c] 	 * spring (2.0.1)
+ DEBUG [ad498c3c] 	 * better_errors (2.1.1)
+ DEBUG [ad498c3c] 	 * hirb (0.7.3)
+ DEBUG [ad498c3c] 	 * unicode-display_width (0.1.1)
+ DEBUG [ad498c3c] 	 * hirb-unicode (0.0.5)
+ DEBUG [ad498c3c] 	 * net-ssh (4.1.0)
+ DEBUG [ad498c3c] 	 * net-scp (1.2.1)
+ DEBUG [ad498c3c] 	 * sshkit (1.13.1)
+ DEBUG [ad498c3c] 	 * airbrussh (1.2.0)
+ DEBUG [ad498c3c] 	 * capistrano-harrow (0.5.3)
+ DEBUG [ad498c3c] 	 * capistrano (3.6.0)
+ DEBUG [ad498c3c] 	 * capistrano-bundler (1.2.0)
+ DEBUG [ad498c3c] 	 * capistrano-rails (1.2.3)
+ DEBUG [ad498c3c] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [ad498c3c] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [ad498c3c] 	Install missing gems with `bundle install`
+ DEBUG [ad498c3c] Finished in 0.344 seconds with exit status 1 (failed).
+  INFO [0895957f] Running /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/exam03/shared/bundle --without development test --deployment --quiet as app@54.199.217.53
+ DEBUG [0895957f] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/exam03/shared/bundle --without development test --deployment --quiet )
+  INFO [0895957f] Finished in 2.485 seconds with exit status 0 (successful).
+ DEBUG [de570404] Running if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [de570404] Command: if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi
+ DEBUG [de570404] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [31245735] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile as app@54.199.217.53
+ DEBUG [31245735] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [31245735] Finished in 3.142 seconds with exit status 0 (successful).
+ DEBUG [56c9fa10] Running if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [56c9fa10] Command: if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi
+ DEBUG [56c9fa10] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [ce9f0ee1] Running /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824/assets_manifest_backup as app@54.199.217.53
+ DEBUG [ce9f0ee1] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/exam03/releases/20170613024824/assets_manifest_backup )
+  INFO [ce9f0ee1] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [9b43a54a] Running /usr/bin/env ls /var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest* as app@54.199.217.53
+ DEBUG [9b43a54a] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest* )
+ DEBUG [9b43a54a] 	/var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json
+ DEBUG [9b43a54a] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [9cb5c664] Running /usr/bin/env ls /var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest* as app@54.199.217.53
+ DEBUG [9cb5c664] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest* )
+ DEBUG [9cb5c664] 	/var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json
+ DEBUG [9cb5c664] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [3a61ab5a] Running /usr/bin/env cp /var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json /var/www/exam03/releases/20170613024824/assets_manifest_backup as app@54.199.217.53
+ DEBUG [3a61ab5a] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cp /var/www/exam03/releases/20170613024824/public/assets/.sprockets-manifest-18fbbbfedeb6ee5682a17d374df46306.json /var/www/exam03/releases/20170613024824/assets_manifest_backup )
+  INFO [3a61ab5a] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [9a48a8b9] Running if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [9a48a8b9] Command: if test ! -d /var/www/exam03/releases/20170613024824; then echo "Directory does not exist '/var/www/exam03/releases/20170613024824'" 1>&2; false; fi
+ DEBUG [9a48a8b9] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [e10367dd] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate as app@54.199.217.53
+ DEBUG [e10367dd] Command: cd /var/www/exam03/releases/20170613024824 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [e10367dd] 	  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  INFO [e10367dd] Finished in 2.735 seconds with exit status 0 (successful).
+  INFO [1f36b4b1] Running /usr/bin/env ln -s /var/www/exam03/releases/20170613024824 /var/www/exam03/releases/current as app@54.199.217.53
+ DEBUG [1f36b4b1] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/exam03/releases/20170613024824 /var/www/exam03/releases/current )
+  INFO [1f36b4b1] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [8ede6883] Running /usr/bin/env mv /var/www/exam03/releases/current /var/www/exam03 as app@54.199.217.53
+ DEBUG [8ede6883] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mv /var/www/exam03/releases/current /var/www/exam03 )
+  INFO [8ede6883] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [c8d888fc] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [c8d888fc] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [c8d888fc] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [0c8540d7] Running [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [0c8540d7] Command: [ -e /var/www/exam03/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/exam03/current/tmp/pids/unicorn.pid`
+ DEBUG [0c8540d7] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [09bd3232] Running if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [09bd3232] Command: if test ! -d /var/www/exam03/current; then echo "Directory does not exist '/var/www/exam03/current'" 1>&2; false; fi
+ DEBUG [09bd3232] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [97ccf1ab] Running /usr/bin/env kill -s USR2 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` as app@54.199.217.53
+ DEBUG [97ccf1ab] Command: cd /var/www/exam03/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env kill -s USR2 `cat /var/www/exam03/current/tmp/pids/unicorn.pid` )
+  INFO [97ccf1ab] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [ecfd288c] Running /usr/bin/env ls -xtr /var/www/exam03/releases as app@54.199.217.53
+ DEBUG [ecfd288c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls -xtr /var/www/exam03/releases )
+ DEBUG [ecfd288c] 	20170612124040	20170612124311	20170612125040	20170612130155	20170613021951
+20170613024301	20170613024824
+ DEBUG [ecfd288c] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 7 deployed releases on 54.199.217.53
+  INFO [c4c09b53] Running /usr/bin/env rm -rf /var/www/exam03/releases/20170612124040 /var/www/exam03/releases/20170612124311 as app@54.199.217.53
+ DEBUG [c4c09b53] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/exam03/releases/20170612124040 /var/www/exam03/releases/20170612124311 )
+  INFO [c4c09b53] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [809af6eb] Running if test ! -d /var/www/exam03/releases; then echo "Directory does not exist '/var/www/exam03/releases'" 1>&2; false; fi as app@54.199.217.53
+ DEBUG [809af6eb] Command: if test ! -d /var/www/exam03/releases; then echo "Directory does not exist '/var/www/exam03/releases'" 1>&2; false; fi
+ DEBUG [809af6eb] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [c95b6e8f] Running /usr/bin/env echo "Branch master (at abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c) deployed as release 20170613024824 by yosi" >> /var/www/exam03/revisions.log as app@54.199.217.53
+ DEBUG [c95b6e8f] Command: cd /var/www/exam03/releases && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "Branch master (at abb9edd5b410cfe373f4b7a6a2da6bbe97321c0c) deployed as release 20170613024824 by yosi" >> /var/www/exam03/revisions.log )
+  INFO [c95b6e8f] Finished in 0.066 seconds with exit status 0 (successful).
