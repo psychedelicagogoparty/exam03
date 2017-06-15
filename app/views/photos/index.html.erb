@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p class="flash"> <%= notice %> </p>
 
 <h1>投稿一覧</h1>
 
@@ -12,14 +12,15 @@
      <!--投稿の大枠-- >
     <div class = "contribution">
 
-    <% @photos.each do |photo| %>
+    <!--　最新の投稿から表示　-->
+    <% @photos.order("created_at DESC").each do |photo| %>
 
           <!-- <＃% binding.pry %> -->
           <div class = "contribution_name">
             <!-- <%#= profile_img(Photo.find(photo.id).user) %> -->
             <!-- <%#= image_tag(@photos.find(photo.id).user.image_url, :size => "40x40")%> -->
             <%= profile_photo_checker(photo) %>
-            <%= link_to photo.name, edit_photo_path(photo), method:'get' %>さん
+            <%= link_to photo.user.name, edit_photo_path(photo), method:'get' %>さん
             <br/>
             <%= contribution_time(photo.created_at) %>に投稿
           </div>
