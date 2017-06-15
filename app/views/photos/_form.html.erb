@@ -4,14 +4,24 @@
     <%= form_for(@photo) do |f| %>
       <%= f.error_messages! %>
 
-      <div class="field">
-        <%= f.text_field :name, placeholder:"タイトル", class:'form-control' %>
+      <!-- <div class="field">
+        <%#= f.text_field :name, placeholder:"タイトル", class:'form-control' %>
       </div>
-      <br/>
+      <br/> -->
 
-      <div class="field">
-        <%= f.text_field :content , placeholder:"コメント", class:'form-control' %>
+      <div class="field content">
+        <!--プロフィール画像が登録されいるかどうか判断-->
+        <% if !@photo.photo.model.photo.blank? %>
+        <!-- 画像がない場合 画像を表示させず適用させるクラスを変更-->
+          <%= image_tag(@photo.photo, :size => "40x40", class: "content_photo") %>
+          <%= f.text_field :content , placeholder:"今何してる？", class:'form-control content_text_validimage' %>
+        <% else %>
+          <%= f.text_field :content , placeholder:"今何してる？", class:'form-control content_text' %>
+        <% end %>
+
       </div>
+
+      <br/>
 
       <div class="field">
         <!-- <＃%= profile_img(@photo) if profile_img(@photo) %> -->
@@ -31,7 +41,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "登録", method:'post', class:'btn btn-block btn-primary'%>
+        <%= f.submit "投稿する", method:'post', class:'btn btn-block btn-primary'%>
       </div>
     <% end %>
 

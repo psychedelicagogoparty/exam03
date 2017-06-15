@@ -5,6 +5,6 @@ class Photo < ActiveRecord::Base
   has_many :comments, dependent: :destroy
 
   # validates :name, :content, :photo, presence: true #バリデーションの設定(旧)
-  validates :name, :content, presence: true #バリデーションの設定
+  validates :content, presence: true #バリデーションの設定
   mount_uploader :photo,PhotoUploader  #carrierwaveの設定
 end
