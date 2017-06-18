@@ -1,7 +1,9 @@
 <div class="container">
-  <h1>tetsstt</h1>
+  <h1>このユーザーについて</h1>
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
         <%= profile_img(@user) %>
         <p>メールアドレス：<%= @user.email %></p>
+        <% binding.pry %>
+        <%= @user.followed_users.find %>
       </div>
 </div>

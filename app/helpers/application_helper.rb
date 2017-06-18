@@ -48,11 +48,13 @@ end
 module ActionView
   module Helpers
     module FormHelper
+
       def error_messages!(object_name, options = {})
         resource = self.instance_variable_get("@#{object_name}")
         return '' if !resource || resource.errors.empty?
 
         messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+        #binding.pry
 
         html = <<-HTML
           <div class="alert alert-danger">

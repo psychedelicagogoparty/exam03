@@ -3,14 +3,11 @@ ja:
     models:
       photo: "写真"
       user: "ユーザー"
-
     attributes:
       photo:
         name: "タイトル"
         content: "内容"
         photo: "写真"
-
-
       user:
         title: "タイトル"
         name: "名前"

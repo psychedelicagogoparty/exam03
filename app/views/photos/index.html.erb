@@ -20,7 +20,7 @@
             <!-- <%#= profile_img(Photo.find(photo.id).user) %> -->
             <!-- <%#= image_tag(@photos.find(photo.id).user.image_url, :size => "40x40")%> -->
             <%= profile_photo_checker(photo) %>
-            <%= link_to photo.user.name, edit_photo_path(photo), method:'get' %>さん
+            <%= link_to photo.user.name, user_path(photo.user.id), method:'get' %>さん
             <br/>
             <%= contribution_time(photo.created_at) %>に投稿
           </div>
@@ -45,8 +45,8 @@
             <%= render partial: 'comments/form', locals: { comment: @comment, photo: @photo } %>
 
           <% if current_user.id == @photo.user_id %>
-              <%#= link_to '編集', edit_photo_path(@photo) %>
-                <%= button_to '投稿を削除', photo_path(photo), method:'delete',data: { confirm: '本当に削除しますか？'}, class:"btn  btn-danger" %>
+                <%= button_to '投稿を編集', edit_photo_path(photo),method: 'get', class: "btn btn-primary" %>
+                <%= button_to '投稿を削除', photo_path(photo), method: 'delete',data: { confirm: '本当に削除しますか？'}, class:"btn  btn-danger" %>
           <% end %>
 
         <% end %>

@@ -29,7 +29,7 @@
                 <!-- <%# binding.pry %> -->
                 <h3>画像を投稿する</h3>
                 <!-- <%= image_tag(@photo.photo, :size => "200x200")%> -->
-                <%= f.file_field :photo %>
+                <%= f.file_field :photo, class: "btn " %>
                 <%= f.hidden_field :photo_cache %>
           <% else %>
                 <!-- <%# binding.pry %> -->
@@ -43,6 +43,9 @@
       <div class="actions">
         <%= f.submit "投稿する", method:'post', class:'btn btn-block btn-primary'%>
       </div>
+
+      <br/>
+      <%= button_to '戻る', photos_path, method: "get", class: "btn btn-block btn-primary" %>
     <% end %>
 
   </div>

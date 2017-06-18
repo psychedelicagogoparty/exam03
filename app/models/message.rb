@@ -7,6 +7,7 @@ class Message < ActiveRecord::Base
 
   # 会話の内容,会話のid,userのidが空でないかどうかをチェック
   validates_presence_of :body, :conversation_id, :user_id
+  # validates :body, presence: true
 
   def message_time
     created_at.strftime("%m/%d/%y at %l:%M %p")
