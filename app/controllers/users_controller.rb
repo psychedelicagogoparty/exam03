@@ -7,6 +7,10 @@ class UsersController < ApplicationController
 
   def show
 
+    #binding.pry
+    @followed_users = @user.followed_users
+    @followers = @user.followers
+
   end
 
   private

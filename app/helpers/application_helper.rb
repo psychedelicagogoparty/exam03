@@ -3,14 +3,17 @@ module ApplicationHelper
   def profile_img(user)
 
     #carrierwaveで画像がアップロードされていた場合(user.avatarに値がある場合)その画像を表示
-    return image_tag(user.avatar, alt: user.name, :size=> "40×40")  if user.avatar?
+    return image_tag(user.avatar, alt: user.name, :size => "100x100", class: "user_photo")  if user.avatar?
+    # return image_tag(user.image_url, alt: user.name)  if user.avatar?
 
     unless user.provider.blank?
       img_url = user.image_url
     else
       img_url = 'no_image.png'
     end
-    image_tag(img_url, alt: user.name, :size => "40x40")
+    image_tag(img_url, alt: user.name, :size => "100x100", class: "nouser_photo")
+
+    # image_tag(user.avatar, alt: user.name, :size => "20x20")
   end
 
   def contribution_time(time)

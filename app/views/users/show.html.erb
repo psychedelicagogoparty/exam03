@@ -2,8 +2,32 @@
   <h1>このユーザーについて</h1>
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
         <%= profile_img(@user) %>
+        <p> プロフィール画像 </p>
         <p>メールアドレス：<%= @user.email %></p>
-        <% binding.pry %>
-        <%= @user.followed_users.find %>
+        <!-- <%# binding.pry %> -->
       </div>
+
+        <p>フォローされているユーザー</p>
+          <% @followers.each do |follower| %>
+          <% if follower.image_url %>
+            <%= image_tag( follower.image_url, alt: follower_user.name, :size => "40x40") %>
+          <% end %>
+            <!-- フォロワーの表示　-->
+            <%= link_to(follower.name, user_path(follower.id)) %>
+            <!-- フォローしたユーザーの表示 -->
+            <%#= user.followers.find(3).name %>
+            <br/>
+          <% end %>
+
+          <p>フォローしているユーザー</p>
+          <% @followed_users.each do |followed_user| %>
+            <% if followed_user.image_url %>
+              <%= image_tag( followed_user.image_url, alt: followed_user.name, :size => "40x40") %>
+            <% end %>
+
+              <!-- フォローしたユーザーの表示 -->
+
+              <%= link_to(followed_user.name, user_path(followed_user.id)) %>
+              <br/>
+          <% end %>
 </div>

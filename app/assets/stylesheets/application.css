@@ -13,3 +13,16 @@
  *= require_self
  *= require_tree .
  */
+
+.user_photo {
+  /*float:left;*/
+  /*padding: 5px;*/
+  margin-bottom:10px;
+}
+
+.nouser_photo {
+  /*float:left;*/
+  /*padding-right:30px;*/
+  margin-right: 25px;
+  margin-bottom:10px;
+}

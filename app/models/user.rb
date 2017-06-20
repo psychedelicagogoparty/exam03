@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar,PhotoUploader  #アップローダーの設定
 
-  validates :name, :email, presence: true #バリデーションの設定
+  validates :name, presence: true #バリデーションの設定
 
 
   #指定のユーザをフォローする

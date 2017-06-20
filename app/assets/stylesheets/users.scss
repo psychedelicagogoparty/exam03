@@ -2,15 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user_index {
+  height: auto;
+  margin: auto;
+  width: 70%;
 
-.user {
-  width: 100%;
+  // width: 700px;
+}
+
+.user_profile {
+  height: auto;
+  // width: 100%;
   border: 2px solid black;
   background-color: white;
-  margin: 10px;
+  margin-bottom: 15px;
+
 }
 
 .user_name {
+  padding: 20px;
   float: right;
 }
 
