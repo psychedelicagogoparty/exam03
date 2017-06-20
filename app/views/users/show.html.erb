@@ -10,7 +10,7 @@
         <p>フォローされているユーザー</p>
           <% @followers.each do |follower| %>
           <% if follower.image_url %>
-            <%= image_tag( follower.image_url, alt: follower_user.name, :size => "40x40") %>
+            <%= image_tag(follower.image_url, alt: follower.name, :size => "40x40") %>
           <% end %>
             <!-- フォロワーの表示　-->
             <%= link_to(follower.name, user_path(follower.id)) %>
