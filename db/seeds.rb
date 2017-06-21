@@ -29,5 +29,13 @@ while n <= 10
     content: "てすとじゃよ♩",
     user_id: n
   )
+
+  Comment.create!(
+    content: "テストコメントです！",
+    user_id: n,
+    photo_id: n
+  )
+
+  # nを1増やす
   n = n + 1
 end
