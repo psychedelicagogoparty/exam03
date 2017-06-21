@@ -48,6 +48,8 @@ gem 'omniauth-facebook'
 gem 'rspec-rails'
 gem 'factory_girl'
 
+# seedデータ登録用
+gem 'faker'
 
 #画像のアップローダー
 gem 'carrierwave'

@@ -5,22 +5,27 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require "SecureRandom"
 
 10.times do |n|
   email = Faker::Internet.email
   password = "password"
-  User.create!(email: email,
+  name = "SEED"
+  User.create!(name: SecureRandom.hex(5),
+               email: email,
                password: password,
                password_confirmation: password,
+               uid: n + 1,
+               provider: ""
                )
 end
 
 
-#10件のブログデータを生成
+#10件の投稿データを生成
 n = 1
 while n <= 10
   Photo.create(
-    title: "test",
+    # title: "test",
     content: "てすとじゃよ♩",
     user_id: n
   )
