@@ -50,6 +50,7 @@ gem 'factory_girl'
 
 # seedデータ登録用
 gem 'faker'
+gem 'letter_opener_web'
 
 #画像のアップローダー
 gem 'carrierwave'
@@ -74,7 +75,6 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'letter_opener_web'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'better_errors'
