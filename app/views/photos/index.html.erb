@@ -23,6 +23,9 @@
             <%= link_to photo.user.name, user_path(photo.user.id), method:'get' %>さん
             <br/>
             <%= contribution_time(photo.created_at) %>に投稿
+            <br/>
+            <%= link_to("詳細", photo_path(photo.id), method: :get)%>
+            <!-- <%#= link_to '', edit_photo_comment_path(photo, comment), class: "fa fa-pencil-square-o fa-lg", method: :get, remote: true  %> -->
           </div>
           <div class = "contribution_text">
             <%= photo.content %>

@@ -50,7 +50,6 @@ gem 'factory_girl'
 
 # seedデータ登録用
 gem 'faker'
-gem 'letter_opener_web'
 
 #画像のアップローダー
 gem 'carrierwave'
@@ -69,6 +68,8 @@ gem 'therubyracer', platforms: :ruby
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'
+  gem 'letter_opener_web'
+  
 end
 
 #開発環境用のgem(実環境時ではインストールされない)

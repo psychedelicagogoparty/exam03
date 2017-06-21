@@ -1,41 +1,41 @@
 module ApplicationHelper
 
-  def profile_img(user)
+    def profile_img(user)
 
-    #carrierwaveで画像がアップロードされていた場合(user.avatarに値がある場合)その画像を表示
-    return image_tag(user.avatar, alt: user.name, :size => "100x100", class: "user_photo")  if user.avatar?
-    # return image_tag(user.image_url, alt: user.name)  if user.avatar?
+      #carrierwaveで画像がアップロードされていた場合(user.avatarに値がある場合)その画像を表示
+      return image_tag(user.avatar, alt: user.name, :size => "100x100", class: "user_photo")  if user.avatar?
+      # return image_tag(user.image_url, alt: user.name)  if user.avatar?
 
-    unless user.provider.blank?
-      img_url = user.image_url
-    else
-      img_url = 'no_image.png'
-    end
-    image_tag(img_url, alt: user.name, :size => "100x100", class: "nouser_photo")
-
-    # image_tag(user.avatar, alt: user.name, :size => "20x20")
-  end
-
-  def contribution_time(time)
-
-    # 現在時刻と投稿日の差分を取得
-    conttime_diff = (Time.now - time).abs
-    if conttime_diff < 86400 #１日より短い
-      conttime_diff_hour = Time.now.hour - time.hour
-      # binding.pry
-      if conttime_diff_hour == 0 #差分が1時間未満
-        # binding.pry
-        return "#{Time.now.min - time.min}分前"
-      else #差分が一時間以上
-        # binding.pry
-        return "#{conttime_diff_hour.abs}時間前"
+      unless user.provider.blank?
+        img_url = user.image_url
+      else
+        img_url = 'no_image.png'
       end
-    else
-      #１日以上の場合は差分を一日分の秒数で割って表示
-      conttime_diff_day = (conttime_diff / 86400).round
-      return "#{conttime_diff_day}日前"
+      image_tag(img_url, alt: user.name, :size => "100x100", class: "nouser_photo")
+
+      # image_tag(user.avatar, alt: user.name, :size => "20x20")
     end
-  end
+
+    def contribution_time(time)
+
+      # 現在時刻と投稿日の差分を取得
+      conttime_diff = (Time.now - time).abs
+      if conttime_diff < 86400 #１日より短い
+        conttime_diff_hour = Time.now.hour - time.hour
+        # binding.pry
+        if conttime_diff_hour == 0 #差分が1時間未満
+          # binding.pry
+          return "#{Time.now.min - time.min}分前"
+        else #差分が一時間以上
+          # binding.pry
+          return "#{conttime_diff_hour.abs}時間前"
+        end
+      else
+        #１日以上の場合は差分を一日分の秒数で割って表示
+        conttime_diff_day = (conttime_diff / 86400).round
+        return "#{conttime_diff_day}日前"
+      end
+    end
 
   #showアクションの代替
   def comment_form(photo_id)

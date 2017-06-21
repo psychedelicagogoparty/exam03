@@ -11,10 +11,10 @@ class PhotosController < ApplicationController
     # render action: :show #これはshowのviewを表示するだけ(showアクションは発生しない)
   end
 
-  # 確認 
+  # 確認
   def show
     # @comment = @photo.comments.build
-    # @comments = @photo.comments
+    #@comments = @photo.comments
   end
 
 

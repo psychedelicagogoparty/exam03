@@ -5,13 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require "SecureRandom"
+# require "SecureRandom"
 
 10.times do |n|
   email = Faker::Internet.email
   password = "password"
   name = "SEED"
-  User.create!(name: SecureRandom.hex(5),
+  User.create!(name: name,
                email: email,
                password: password,
                password_confirmation: password,

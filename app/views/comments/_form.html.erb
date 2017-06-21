@@ -8,10 +8,10 @@
 
     <!--コメントのコンテンツがないかどうかの確認-->
     <% if comment.content.blank? %>
-      <%= f.text_field :content, placeholder: "内容", class: "form-control"  %>
+      <%= f.text_field :content, placeholder: "内容", class: "form-control btn-default"  %>
     <% else %>
       <!-- <p>neko</p> -->
-      <%= f.text_field :content ,placeholder: "内容", class: "form-control"  %>
+      <%= f.text_field :content ,placeholder: "内容", class: "form-control btn btn-default"  %>
     <% end %>
   </div>
 

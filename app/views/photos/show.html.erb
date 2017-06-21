@@ -1,0 +1,45 @@
+
+<h2> 投稿詳細　</h2>
+
+<div class="container" >
+ <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+
+  <div class = "contribution_name">
+    <%= profile_img(Photo.find(@photo.id).user) %>
+    <p>投稿者：<%= link_to @photo.user.name, user_path(@photo.user.id), method:'get' %>さん</p>
+    <%= contribution_time(@photo.created_at) %>に投稿
+    <br/>
+    <!-- <%#= link_to '', edit_photo_comment_path(photo, comment), class: "fa fa-pencil-square-o fa-lg", method: :get, remote: true  %> -->
+  </div>
+
+    <h3> 投稿内容 </h3>
+  <div class = "contribution_text">
+    <%= @photo.content %>
+  </div>
+
+
+
+
+  <!-- コメント入力欄-->
+  <!-- アプリケーションヘルパーから呼び出し-->
+  <h3>コメント一覧</h3>
+  <% comment_form(Photo.find(@photo.id)) %>
+   <!-- コメント入力のビューを表示-->
+  <%#= render 'show' %>
+
+  <div id="comments_area_<%= @photo.id %>">
+    <%= render partial: 'comments/index', locals: { comments: @comments, photo: @photo } %>
+  </div>
+    <%= render partial: 'comments/form', locals: { comment: @comment, photo: @photo } %>
+
+  <% if current_user.id == @photo.user_id %>
+        <p><%= button_to '投稿を編集', edit_photo_path(@photo),method: 'get', class: "btn btn-primary" %></p>
+        <%= button_to '投稿を削除', photo_path(@photo), method: 'delete',data: { confirm: '本当に削除しますか？'}, class:"btn  btn-danger" %>
+  <% end %>
+
+  <br/>
+  <%= button_to("投稿一覧へ戻る", photos_path, method: 'get', class: "btn btn-primary btn-block")%>
+  <br/>
+  
+ </div>
+</div>
